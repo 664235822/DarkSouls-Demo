@@ -23,6 +23,7 @@ public class PlayerInput : MonoBehaviour
     public Vector3 directionVector;
 
     public bool run;
+    public bool jump;
 
     [Header("Other Settings")]
     public bool inputEnabled = true;
@@ -31,6 +32,8 @@ public class PlayerInput : MonoBehaviour
     private float targetDirectionRight;
     private float velocityDirectionUp;
     private float velocityDirectionRight;
+
+    private bool lastJump;
 
     // Update is called once per frame
     void Update()
@@ -43,18 +46,31 @@ public class PlayerInput : MonoBehaviour
             targetDirectionUp = 0;
             targetDirectionRight = 0;
         }
-        
+
         directionUp = Mathf.SmoothDamp(directionUp, targetDirectionUp, ref velocityDirectionUp, 0.1f);
         directionRight = Mathf.SmoothDamp(directionRight, targetDirectionRight, ref velocityDirectionRight, 0.1f);
 
         Vector2 directionAxis = SquareToCircle(new Vector2(directionRight, directionUp));
         float tempDirectionRight = directionAxis.x;
         float tempDirectionUp = directionAxis.y;
-        
-        directionMagnitude = Mathf.Sqrt((tempDirectionUp * tempDirectionUp) + (tempDirectionRight * tempDirectionRight));
+
+        directionMagnitude =
+            Mathf.Sqrt((tempDirectionUp * tempDirectionUp) + (tempDirectionRight * tempDirectionRight));
         directionVector = transform.forward * tempDirectionUp + transform.right * tempDirectionRight;
 
         run = Input.GetKey(keyA);
+
+        bool tempJump = Input.GetKey(keyB);
+        if (tempJump != lastJump && tempJump)
+        {
+            jump = true;
+        }
+        else
+        {
+            jump = false;
+        }
+
+        lastJump = tempJump;
     }
 
     Vector2 SquareToCircle(Vector2 input)
