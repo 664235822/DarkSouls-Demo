@@ -13,6 +13,7 @@ public class ActorController : MonoBehaviour
     public float walkSpeed = 1.5f;
     public float runSpeed = 3.0f;
     public float jumpVelocity = 4.0f;
+    public float rollVelocity = 3.0f;
 
     private Vector3 planarVector;
     private bool planarLock;
@@ -24,6 +25,10 @@ public class ActorController : MonoBehaviour
     {
         anim.SetFloat("forward",
             playerInput.directionMagnitude * Mathf.Lerp(anim.GetFloat("forward"), playerInput.run ? 2.0f : 1.0f, 0.3f));
+        if (rigid.velocity.magnitude > 5.0f)
+        {
+            anim.SetTrigger("roll");
+        }
         if (playerInput.jump)
         {
             anim.SetTrigger("jump");    
@@ -75,5 +80,18 @@ public class ActorController : MonoBehaviour
     {
         anim.SetBool("isGround", false);
     }
-    
+
+    public void OnRollEnter()
+    {
+        playerInput.inputEnabled = false;
+        planarLock = true;
+        thrustVector = new Vector3(0, rollVelocity, 0);
+    }
+
+    public void OnJabUpdate()
+    {
+        playerInput.inputEnabled = false;
+        planarLock = true;
+        thrustVector = model.transform.forward * anim.GetFloat("jabVelocity");
+    }
 }

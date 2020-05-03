@@ -174,6 +174,7 @@ MonoBehaviour:
   walkSpeed: 1.5
   runSpeed: 3
   jumpVelocity: 4
+  rollVelocity: 3
 --- !u!114 &204107263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   capsuleCollider: {fileID: 204107261}
-  offset: 0.1
+  offset: 0.3
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,8 +712,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022808932}
   m_LocalRotation: {x: -0.17226799, y: -0, z: -0, w: 0.98505014}
-  m_LocalPosition: {x: 0.8662672, y: 0.36, z: 4}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 0.8662672, y: 0.71, z: 4}
+  m_LocalScale: {x: 5, y: 0.30723, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
