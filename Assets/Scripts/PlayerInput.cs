@@ -15,9 +15,15 @@ public class PlayerInput : MonoBehaviour
     public string keyX;
     public string keyY;
 
+    public string keyCameraUp;
+    public string keyCameraRight;
+
     [Header("Direction Outputs")]
     public float directionUp;
     public float directionRight;
+
+    public float cameraUp;
+    public float cameraRight;
 
     public float directionMagnitude;
     public Vector3 directionVector;
@@ -40,6 +46,9 @@ public class PlayerInput : MonoBehaviour
     {
         targetDirectionUp = (Input.GetKey(keyUp) ? 1.0f : 0) - (Input.GetKey(keyDown) ? 1.0f : 0);
         targetDirectionRight = (Input.GetKey(keyRight) ? 1.0f : 0) - (Input.GetKey(keyLeft) ? 1.0f : 0);
+
+        cameraUp = Input.GetAxis(keyCameraUp);
+        cameraRight = Input.GetAxis(keyCameraRight);
 
         if (!inputEnabled)
         {
