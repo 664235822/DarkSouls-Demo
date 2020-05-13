@@ -222,7 +222,7 @@ MonoBehaviour:
   anim: {fileID: 447688780}
   playerInput: {fileID: 204107263}
   rigid: {fileID: 204107265}
-  walkSpeed: 1.5
+  walkSpeed: 2
   runSpeed: 3
   jumpVelocity: 4
   rollVelocity: 3

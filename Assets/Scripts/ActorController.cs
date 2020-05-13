@@ -10,7 +10,7 @@ public class ActorController : MonoBehaviour
     public PlayerInput playerInput;
     public Rigidbody rigid;
 
-    public float walkSpeed = 1.5f;
+    public float walkSpeed = 2.0f;
     public float runSpeed = 3.0f;
     public float jumpVelocity = 4.0f;
     public float rollVelocity = 3.0f;
