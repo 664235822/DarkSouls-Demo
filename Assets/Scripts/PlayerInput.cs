@@ -30,6 +30,7 @@ public class PlayerInput : MonoBehaviour
 
     public bool run;
     public bool jump;
+    public bool attack;
 
     [Header("Other Settings")]
     public bool inputEnabled = true;
@@ -40,6 +41,7 @@ public class PlayerInput : MonoBehaviour
     private float velocityDirectionRight;
 
     private bool lastJump;
+    private bool lastAttack;
 
     // Update is called once per frame
     void Update()
@@ -80,6 +82,18 @@ public class PlayerInput : MonoBehaviour
         }
 
         lastJump = tempJump;
+        
+        bool tempAttack = Input.GetKey(keyX);
+        if (tempAttack != lastAttack && tempAttack)
+        {
+            attack = true;
+        }
+        else
+        {
+            attack = false;
+        }
+
+        lastAttack = tempAttack;
     }
 
     Vector2 SquareToCircle(Vector2 input)

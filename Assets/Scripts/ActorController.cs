@@ -29,11 +29,17 @@ public class ActorController : MonoBehaviour
         {
             anim.SetTrigger("roll");
         }
+
         if (playerInput.jump)
         {
-            anim.SetTrigger("jump");    
+            anim.SetTrigger("jump");
         }
-        
+
+        if (playerInput.attack)
+        {
+            anim.SetTrigger("attack");
+        }
+
         if (playerInput.directionMagnitude > 0.1f)
         {
             model.forward = Vector3.Slerp(model.forward, playerInput.directionVector, 0.3f);
@@ -41,9 +47,10 @@ public class ActorController : MonoBehaviour
 
         if (!planarLock)
         {
-            planarVector = playerInput.directionMagnitude * model.forward * walkSpeed * (playerInput.run ? runSpeed : 1.0f);
+            planarVector = playerInput.directionMagnitude * model.forward * walkSpeed *
+                           (playerInput.run ? runSpeed : 1.0f);
         }
-        
+
     }
 
     private void FixedUpdate()
@@ -58,13 +65,13 @@ public class ActorController : MonoBehaviour
         planarLock = true;
         thrustVector = new Vector3(0, jumpVelocity, 0);
     }
-    
+
     public void OnGroundEnter()
     {
         playerInput.inputEnabled = true;
         planarLock = false;
     }
-    
+
     public void OnFailEnter()
     {
         playerInput.inputEnabled = false;
@@ -93,5 +100,22 @@ public class ActorController : MonoBehaviour
         playerInput.inputEnabled = false;
         planarLock = true;
         thrustVector = model.transform.forward * anim.GetFloat("jabVelocity");
+    }
+
+    public void OnAttack1hAEnter()
+    {
+        playerInput.inputEnabled = false;
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), 1.0f);
+    }
+
+    public void OnAttack1hAUpdate()
+    {
+        thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
+    }
+    
+    public void OnAttackIdleEnter()
+    {
+        playerInput.inputEnabled = true;
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), 0);
     }
 }
