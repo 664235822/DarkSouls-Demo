@@ -1,0 +1,43 @@
+#if GAIA_PRESENT
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using System.IO;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+namespace Gaia.GX.{{ ExtensionPublisher }}
+{
+    /// <summary>
+    /// Automatically exported GAIA extensions. This file contains support for Resources and Spawners.
+    /// Methods exposed by Gaia as buttons must be prefixed with GX_. General format is GX_SectionName_ButtonName.
+    /// Leaving section name out will place the button at the top level eg GX_ButtonName.
+    /// </summary>
+    public class {{ ExtensionPackage }} : MonoBehaviour {
+
+        #region Generic informational methods
+
+        /// <summary>
+        /// Returns the publisher name if provided. 
+        /// This will override the publisher name in the namespace ie Gaia.GX.PublisherName
+        /// </summary>
+        /// <returns>Publisher name</returns>
+        public static string GetPublisherName()
+        {
+            return "{{ ExtensionPublisherFull }}";
+        }
+
+        /// <summary>
+        /// Returns the package name if provided
+        /// This will override the package name in the class name ie public class PackageName.
+        /// </summary>
+        /// <returns>Package name</returns>
+        public static string GetPackageName()
+        {
+            return "{{ ExtensionPackageFull }}";
+        }
+
+        #endregion

@@ -1,0 +1,14 @@
+Release notes for Gaia v1.5.3 March 2016
+
+Enhancements
+	• Improved the session preview image display
+	• Improved the random terrain layout algorithms to use stencils as well
+	• Added use screen resolution capability to screen shotter
+	• Added 10 new river stamps
+
+Bug Fixes:
+	• Fixed game object local scale on spawn issue
+	• Fixed asset export dublicated object export issue
+	• Fixed duplicate object session serialise and deserialise issue
+	• Fixed random terrain generation height issue
+	

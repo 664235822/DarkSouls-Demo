@@ -1,0 +1,13 @@
+Release notes for Gaia v1.8.0 September 2018
+
+New Features
+	• Added Mac 16 bit raw import
+	• Added 8 bit raw file import
+
+Enhancements
+	• U2018 related fixes due to changed API's related to spawning prefabs
+	• Turned off automatic lightmap baking when creating news scenes
+	• Improvement to bounds based collision checking
+	• Added Terrain Utilities to Main menu to highlight it
+	• Reorganised More menus to make them more understandable
+	• Minor usability tweaks

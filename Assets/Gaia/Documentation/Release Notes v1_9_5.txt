@@ -1,0 +1,6 @@
+Release notes for Gaia v1.9.5 May 2019
+
+· Added missing package definitions for Unity 2018.4 LTS
+· Various smaller fixes for Unity 2018.4 compatibility
+· Various smaller fixes for water Setup in HDRP
+· Added a warning message when lighting could not be set up in the scene due to the full version of Ambient Skies being used in the project

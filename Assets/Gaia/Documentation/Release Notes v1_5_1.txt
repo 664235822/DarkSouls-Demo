@@ -1,0 +1,18 @@
+Release notes for Gaia v1.5.1 February 2016
+
+New Features:
+	• Grass splatmap exporter
+
+Enhancements:
+	• Sea level now editable in the session manager
+	• Sea level defaults set to 50m instead of 100m 
+	• GX - Procedural Worlds - Camera and Light - Changed approach - now shows all the time
+	• GX - Procedural Worlds - Camera and Light - Detected alternative spelling of Directional Light in some unity version
+	• Got rid of obsolete message in 5.3.x
+	• Improved documentaion on sessions
+	• Added documentation on extensions
+	
+Bug Fixes:
+	• Fixed a configuration error in GaiaResources that was causing a house not to be spawned properly
+	• Fixed incorrect documentation in QuickStart Guide
+	

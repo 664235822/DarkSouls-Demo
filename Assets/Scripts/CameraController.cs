@@ -16,12 +16,6 @@ public class CameraController : MonoBehaviour
 
     private float tempEulerX = 20.0f;
     private Vector3 smoothDampVelocity;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -31,7 +25,7 @@ public class CameraController : MonoBehaviour
         playerHandle.transform.Rotate(Vector3.up, playerInput.cameraRight * MouseXSpeed * Time.fixedDeltaTime);
         
         tempEulerX -= playerInput.cameraUp * MouseYSpeed * Time.fixedDeltaTime;
-        tempEulerX = Mathf.Clamp(tempEulerX, -40, 30);
+        tempEulerX = Mathf.Clamp(tempEulerX, -20, 30);
         cameraHandle.transform.localEulerAngles = new Vector3(tempEulerX, 0, 0);
 
         model.transform.eulerAngles = tempModelEuler;

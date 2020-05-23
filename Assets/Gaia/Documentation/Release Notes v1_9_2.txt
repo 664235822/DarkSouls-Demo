@@ -1,0 +1,26 @@
+﻿Release notes for Gaia v1.9.2 March 2019
+
+New Features
+· Added pipeline switching support in 2018.3 or higher.
+· Added shader switching between High Definition, Lightweight and Built-In.
+· Added Lightweight and High Definition water shaders.
+· Gaia Ambient Skies Samples supports Lightweight and High Definition light configuration.
+· In Unity 2018.3 or newer Gaia creates Terrain Layers for new terrain system.
+· Added Occlusion Culling setup in GX Ambient Skies Samples.
+· Improved 2018.3 compatibility.
+
+Enhancements
+· Gaia Gameobject spawner settings improved for better spawning chances.
+· Updated Daytime Audio to be more atmospheric and have less bird sounds.
+· Updated water reflection probe y size to fix reflection bug on the water surface.
+· Underwater script optimized for better performance.
+· Underwater effect now supported in Lightweight and High Definition pipeline.
+
+Fixes
+· Fixed warning message from FPS Controller.
+· Fixed Terrain Layer warnings in Unity 2018.3 or higher.
+· Fixed Session Manager data corruption in 2018.3 or newer.
+· Fixed Dependencies importing in Unity 2018.x or newer.
+
+Scene Lighting
+· Updated Ambient Skies samples lighting setups and post processing profiles.

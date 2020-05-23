@@ -1,0 +1,53 @@
+Release notes for Gaia v1.5 February 2016
+
+Significant New Features:
+	• Turboscalpeurs HQ grasses
+	• GameTextures.com textures
+	• Screen shotter with customisable water mark
+	• Point of Interest (POI) spawner system
+	• Customisable spawner extension system
+	• Non destructive composable resources system - create terrain from multiple resources
+	• New noise masking at stamp, spawner and rule level
+	• Gaia eXtensions and extension exporter
+	• Gaia sessions and session manager
+	• Gaia directed random terrain creator
+	• Player camera FX configuration
+	• Simple scene lighting configuration
+	• Normal map texture exporter
+	• Splatmap texture map exporter
+	• Waterflow mask exporter
+	• Terrain height adjuster
+	• 150 stamps!
+	
+
+Enhancements:
+	• Sea level now taken from terrain defaults file and managed at session level
+	• Clustered detail spawner automatic configuration for flowers and grass
+	• Multi terrain check - stops attempts to use Gaia when multi terrains are enabled
+	• Max instances on spawner changed to long, added override to ignore, set ignore on for textures and grass by default
+	• WebGL build bug - added manual versions of the missing routines - will no longer generate errors
+	• All new objects centered on actual terrain Player, WindZone, Visualiser, Stamps, Spawners, Scanner
+	• Automatically select terrain layer in stampers, spawners and visualiser
+	• Visualiser  now shows relative to 'sea level' settings
+	• Increased terrain texture masks from 4 to 8 layers - stamper, spawner
+	• Button enabling / disabling if no resources file set
+	• Spawner range exclusion check more accurate
+	• Using non zero centered  terrains now alerts and offers to move terrain - stamper, spawner, visualiser
+	• All spawns now check their resources against the terrain and alerts to add them
+	• Duplicate resource file names updated to allow dropdowns to work eg SameRes, SameRes 1 etc
+	• Water added to session manager, visualiser, spawners
+	• Many tweaks to all settings to provide better default experience
+	• Defaults now remembered between sessions and new gaia settings object added
+	• Player and water prefabs can be overidden in default settings
+	• Fixed water 4 spawn so that there are no nasty lines
+	• Clear trees - now calls reset on all tree spawners
+	• New collider and collider based collision management system
+	• Spawned game objects now aggregated by type - allowing for easier management
+	• Add player - reposition on terrain if called again and allow to substitute another one
+	• Add water - reposition on terrain if called again and allow to substitute another one
+	• Global tooltips - can disable them in gaia settings
+	
+Bug Fixes:
+	• Spawner range exclusion check now correctly enforces spawner volumes
+	• Resources mesh grass not correctly handled
+	• WebGL no longer reports issues with ReadAllBytes and WriteAllBytes 

@@ -1,0 +1,5 @@
+Release notes for Gaia v1.6.1 August 2017
+
+Enhancements
+	• Workaround for Unity 2017.x curve editing bug
+	

@@ -1,0 +1,10 @@
+Release notes for Gaia v1.9.3 May 2019
+
+· Added 2019.1 support.
+· Fixed 2019.1 import bug.
+· Reworked shaders for 2019.1.
+· Reworked post fx for 2019.1.
+· Added support for LW 5.7.2 and HD 5.7.2 pipelines.
+· Moved some of the default setup back to Ambient Skies GX.
+· Fixed editor utils resource leak.
+· Updated horizon shader.

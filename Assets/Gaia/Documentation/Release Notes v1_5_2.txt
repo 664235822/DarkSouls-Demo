@@ -1,0 +1,10 @@
+Release notes for Gaia v1.5.2 February 2016
+
+Enhancements
+	• Changed default stamp height to be 1/4 of stamp widht to improve default perspective
+	• Improved default session editor
+
+Bug Fixes:
+	• Fixed GX menu display issue
+	• Fixed ReadAllBytes error on some platforms
+	

@@ -1,0 +1,9 @@
+Release notes for Gaia v1.6.0 July 2017
+
+Enhancements
+	• Improved lighting setup 
+	• Removed Unity API warnings
+	• Fixed lighting settings on sample prefabs
+	• Added removal autodetect
+	• Various small UX settings
+	• Configured speedtree for instancing

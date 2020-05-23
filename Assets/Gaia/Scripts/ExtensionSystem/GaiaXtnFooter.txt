@@ -1,0 +1,78 @@
+
+        #region Utility methods
+
+		/// <summary>
+        /// Get a Texture2D from the path provided
+        /// </summary>
+        /// <param name="fileName">File name to check</param>
+        /// <returns>Texture if found or null</returns>
+        public static Texture2D GetTexture2D(string fileName)
+        {
+            Texture2D resource = null;
+			
+            #if UNITY_EDITOR
+            resource = PWCommon.Utils.GetAsset(fileName, typeof(UnityEngine.Texture2D)) as Texture2D;
+            #endif
+
+            return resource;
+        }
+
+		/// <summary>
+        /// Get a Game Object from the path provided
+        /// </summary>
+        /// <param name="fileName">Path to check</param>
+        /// <returns>GameObject if found or null</returns>
+        public static GameObject GetGameObject(string fileName)
+        {
+            GameObject resource = null;
+			
+            #if UNITY_EDITOR
+            resource = PWCommon.Utils.GetAsset(fileName, typeof(UnityEngine.GameObject)) as GameObject;
+            #endif
+
+            return resource;
+        }
+
+		/// <summary>
+        /// Get a spawn rule extension
+        /// </summary>
+        /// <param name="fileName">Path to check</param>
+        /// <returns>GameObject if found or null</returns>
+        public static Gaia.SpawnRuleExtension GetSpawnRuleExtension(string fileName)
+        {
+			Gaia.SpawnRuleExtension extension = null;
+			
+            #if UNITY_EDITOR
+            GameObject resource = PWCommon.Utils.GetAsset(fileName, typeof(UnityEngine.GameObject)) as GameObject;
+			if (resource != null)
+			{
+				extension = resource.GetComponent<Gaia.SpawnRuleExtension>();
+			}
+            #endif
+
+            return extension;
+        }
+
+
+
+        /// <summary>
+        /// Get the resource from the ID provided
+        /// </summary>
+        /// <param name="fileName">Resource with the given ID to check</param>
+        /// <param name="id">Resource with the given ID to check</param>
+        /// <returns>Resource if found or null</returns>
+        public static Gaia.GaiaResource GetResource(string fileName, string id)
+        {
+            Gaia.GaiaResource resource = null;
+
+            #if UNITY_EDITOR
+			resource = PWCommon.Utils.GetAsset(fileName, typeof(Gaia.GaiaResource)) as Gaia.GaiaResource;
+            #endif
+
+            return resource;
+        }
+
+        #endregion
+    }
+}
+#endif

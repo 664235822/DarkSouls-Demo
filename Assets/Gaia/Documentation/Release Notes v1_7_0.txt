@@ -1,0 +1,41 @@
+Release notes for Gaia v1.7.0 May 2018
+
+New Features
+	• Better automated setup 
+		• New multi environment configuration setup
+		• New third person setup plus camera controller
+		• New rollerball setup plus camera controller
+		• New flying camera setup plus controller
+		• Accessible renderer selection
+		• Accessible terrain size selection
+	• Ultra light, Mobile & VR, Desktop and Power Desktop configurations
+	• Built in and Unity 2018 LW SRP renderer setup
+	• New terrain utilities module
+		• Add to terrain
+		• Apply mask to splatmap
+		• Contrast filter
+		• Grow features filter
+		• De Noise filter
+		• Hydraulic Erosion filter
+		• Multiply Terrain
+		• Power of Filter
+		• Quantize Filter
+		• Quantize Curves Filter (Terracing)
+		• Set Terrain To Height
+		• Shrink Features Filter
+		• Subtract From Terrain
+		• Thermal Erosion Filter
+		• Noise Generation Module
+		• Many Export Types
+	• EXR (high fidelity) mask import and export
+	• New news system
+	• New content!
+		• Synty Studios Models & Textures
+		• NatureManufacture Textures
+		• Unity Blacksmith Exteriors 
+
+Enhancements
+	• Various bug fixes
+	• Different settings for terrain assets vs game object assets
+	• Usability review with contextual links to tutorials
+	• Ability to treat game objects like trees when spawning

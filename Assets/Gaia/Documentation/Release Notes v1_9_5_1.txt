@@ -1,0 +1,3 @@
+Release notes for Gaia v1.9.5.1 June 2019
+
+· Hotfix for a compilation error appearing in Unity 2019.1 in HDRP only
