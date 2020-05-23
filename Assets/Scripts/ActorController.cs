@@ -10,15 +10,21 @@ public class ActorController : MonoBehaviour
     public PlayerInput playerInput;
     public Rigidbody rigid;
 
+    [Header("Movement Setting")]
     public float walkSpeed = 2.0f;
     public float runSpeed = 3.0f;
     public float jumpVelocity = 4.0f;
     public float rollVelocity = 3.0f;
 
+    [Header("Friction Setting")] 
+    public CapsuleCollider collider;
+    public PhysicMaterial FrictionOne;
+    public PhysicMaterial FrictionZero;
+    
     private Vector3 planarVector;
     private bool planarLock;
-
     private Vector3 thrustVector;
+    private bool canAttack = true;
 
     // Update is called once per frame
     void Update()
@@ -33,9 +39,10 @@ public class ActorController : MonoBehaviour
         if (playerInput.jump)
         {
             anim.SetTrigger("jump");
+            canAttack = false;
         }
 
-        if (playerInput.attack)
+        if (playerInput.attack && CheckState("ground") && canAttack)
         {
             anim.SetTrigger("attack");
         }
@@ -59,6 +66,11 @@ public class ActorController : MonoBehaviour
         thrustVector = Vector3.zero;
     }
 
+    private bool CheckState(string stateName, string layerName = "Base Layer")
+    {
+        return anim.GetCurrentAnimatorStateInfo(anim.GetLayerIndex(layerName)).IsName(stateName);
+    }
+
     public void OnJumpEnter()
     {
         playerInput.inputEnabled = false;
@@ -70,6 +82,14 @@ public class ActorController : MonoBehaviour
     {
         playerInput.inputEnabled = true;
         planarLock = false;
+        canAttack = true;
+        
+        collider.material = FrictionOne;
+    }
+
+    public void OnGroundExit()
+    {
+        collider.material = FrictionZero;
     }
 
     public void OnFailEnter()
