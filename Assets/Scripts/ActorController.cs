@@ -25,6 +25,7 @@ public class ActorController : MonoBehaviour
     private bool planarLock;
     private Vector3 thrustVector;
     private bool canAttack = true;
+    private float lerpTarget;
 
     // Update is called once per frame
     void Update()
@@ -125,17 +126,26 @@ public class ActorController : MonoBehaviour
     public void OnAttack1hAEnter()
     {
         playerInput.inputEnabled = false;
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), 1.0f);
+        lerpTarget = 1.0f;
     }
 
     public void OnAttack1hAUpdate()
     {
         thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
+        float currentWeight = Mathf.Lerp(anim.GetLayerWeight(anim.GetLayerIndex("Attack")), lerpTarget, 0.1f);
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), currentWeight);
     }
     
     public void OnAttackIdleEnter()
     {
         playerInput.inputEnabled = true;
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), 0);
+        lerpTarget = 0;
+    }
+
+    public void OnAttackIdleUpdate()
+    {
+        thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
+        float currentWeight = Mathf.Lerp(anim.GetLayerWeight(anim.GetLayerIndex("Attack")), lerpTarget, 0.1f);
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), currentWeight);
     }
 }
