@@ -26,6 +26,7 @@ public class ActorController : MonoBehaviour
     private Vector3 thrustVector;
     private bool canAttack = true;
     private float lerpTarget;
+    private Vector3 deltaPosition;
 
     // Update is called once per frame
     void Update()
@@ -63,8 +64,10 @@ public class ActorController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        rigid.position += deltaPosition;
         rigid.velocity = new Vector3(planarVector.x, rigid.velocity.y, planarVector.z) + thrustVector;
         thrustVector = Vector3.zero;
+        deltaPosition = Vector3.zero;
     }
 
     private bool CheckState(string stateName, string layerName = "Base Layer")
@@ -147,5 +150,13 @@ public class ActorController : MonoBehaviour
         thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
         float currentWeight = Mathf.Lerp(anim.GetLayerWeight(anim.GetLayerIndex("Attack")), lerpTarget, 0.1f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack"), currentWeight);
+    }
+
+    public void OnUpdateRootMotion(object deltaPosition)
+    {
+        if (CheckState("attack1hC", "Attack"))
+        {
+            this.deltaPosition += (Vector3) deltaPosition;
+        }
     }
 }
