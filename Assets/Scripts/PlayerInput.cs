@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerInput : MonoBehaviour
 {
     [Header("Keys Setting")]
-    public string keyUp;
-    public string keyDown;
-    public string keyLeft;
-    public string keyRight;
+    public string keyDirectionUp;
+    public string keyDirectionRight;
+
+    public string keyCameraUp;
+    public string keyCameraRight;
     
     public string keyA;
     public string keyB;
     public string keyX;
     public string keyY;
-
-    public string keyCameraUp;
-    public string keyCameraRight;
 
     [Header("Direction Outputs")]
     public float directionUp;
@@ -46,11 +45,12 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetDirectionUp = (Input.GetKey(keyUp) ? 1.0f : 0) - (Input.GetKey(keyDown) ? 1.0f : 0);
-        targetDirectionRight = (Input.GetKey(keyRight) ? 1.0f : 0) - (Input.GetKey(keyLeft) ? 1.0f : 0);
+        
+        targetDirectionRight = CrossPlatformInputManager.GetAxis(keyDirectionRight);
+        targetDirectionUp = CrossPlatformInputManager.GetAxis(keyDirectionUp);
 
-        cameraUp = Input.GetAxis(keyCameraUp);
-        cameraRight = Input.GetAxis(keyCameraRight);
+        cameraUp = CrossPlatformInputManager.GetAxis(keyCameraUp);
+        cameraRight = CrossPlatformInputManager.GetAxis(keyCameraRight);
 
         if (!inputEnabled)
         {
@@ -68,10 +68,10 @@ public class PlayerInput : MonoBehaviour
         directionMagnitude =
             Mathf.Sqrt((tempDirectionUp * tempDirectionUp) + (tempDirectionRight * tempDirectionRight));
         directionVector = transform.forward * tempDirectionUp + transform.right * tempDirectionRight;
-
-        run = Input.GetKey(keyA);
-
-        bool tempJump = Input.GetKey(keyB);
+        
+        run = CrossPlatformInputManager.GetButton(keyA);
+        
+        bool tempJump = CrossPlatformInputManager.GetButton(keyB);
         if (tempJump != lastJump && tempJump)
         {
             jump = true;
@@ -82,8 +82,8 @@ public class PlayerInput : MonoBehaviour
         }
 
         lastJump = tempJump;
-        
-        bool tempAttack = Input.GetKey(keyX);
+
+        bool tempAttack = CrossPlatformInputManager.GetButton(keyX);
         if (tempAttack != lastAttack && tempAttack)
         {
             attack = true;
@@ -94,6 +94,7 @@ public class PlayerInput : MonoBehaviour
         }
 
         lastAttack = tempAttack;
+
     }
 
     Vector2 SquareToCircle(Vector2 input)
