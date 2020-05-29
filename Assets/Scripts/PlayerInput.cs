@@ -30,6 +30,7 @@ public class PlayerInput : MonoBehaviour
     public bool run;
     public bool jump;
     public bool attack;
+    public bool defense;
 
     [Header("Other Settings")]
     public bool inputEnabled = true;
@@ -38,9 +39,6 @@ public class PlayerInput : MonoBehaviour
     private float targetDirectionRight;
     private float velocityDirectionUp;
     private float velocityDirectionRight;
-
-    private bool lastJump;
-    private bool lastAttack;
 
     // Update is called once per frame
     void Update()
@@ -70,31 +68,10 @@ public class PlayerInput : MonoBehaviour
         directionVector = transform.forward * tempDirectionUp + transform.right * tempDirectionRight;
         
         run = CrossPlatformInputManager.GetButton(keyA);
-        
-        bool tempJump = CrossPlatformInputManager.GetButton(keyB);
-        if (tempJump != lastJump && tempJump)
-        {
-            jump = true;
-        }
-        else
-        {
-            jump = false;
-        }
+        defense = CrossPlatformInputManager.GetButton(keyY);
 
-        lastJump = tempJump;
-
-        bool tempAttack = CrossPlatformInputManager.GetButton(keyX);
-        if (tempAttack != lastAttack && tempAttack)
-        {
-            attack = true;
-        }
-        else
-        {
-            attack = false;
-        }
-
-        lastAttack = tempAttack;
-
+        jump = CrossPlatformInputManager.GetButtonDown(keyB);
+        attack = CrossPlatformInputManager.GetButtonDown(keyX);
     }
 
     Vector2 SquareToCircle(Vector2 input)
