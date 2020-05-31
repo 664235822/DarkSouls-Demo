@@ -9,6 +9,7 @@ public class ActorController : MonoBehaviour
     public Animator anim;
     public PlayerInput playerInput;
     public Rigidbody rigid;
+    public CameraController cameraController;
 
     [Header("Movement Setting")]
     public float walkSpeed = 2.0f;
@@ -23,6 +24,7 @@ public class ActorController : MonoBehaviour
     
     private Vector3 planarVector;
     private bool planarLock;
+    private bool directionTrack;
     private Vector3 thrustVector;
     private bool canAttack = true;
     private float lerpTarget;
@@ -31,8 +33,20 @@ public class ActorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        anim.SetFloat("forward",
-            playerInput.directionMagnitude * Mathf.Lerp(anim.GetFloat("forward"), playerInput.run ? 2.0f : 1.0f, 0.3f));
+
+        if (!cameraController.lockState)
+        {
+            anim.SetFloat("forward",
+                playerInput.directionMagnitude * Mathf.Lerp(anim.GetFloat("forward"), playerInput.run ? 2.0f : 1.0f, 0.3f));
+            anim.SetFloat("right",0);
+        }
+        else
+        {
+            Vector3 localDVec = transform.InverseTransformVector(playerInput.directionVector);
+            anim.SetFloat("forward", localDVec.z * (playerInput.run ? 2.0f : 1.0f));
+            anim.SetFloat("right", localDVec.x * (playerInput.run ? 2.0f : 1.0f));
+        }
+        
 
         anim.SetBool("defense", playerInput.defense);
         
@@ -57,11 +71,37 @@ public class ActorController : MonoBehaviour
             model.forward = Vector3.Slerp(model.forward, playerInput.directionVector, 0.3f);
         }
 
-        if (!planarLock)
+        if (playerInput.lockTarget)
         {
-            planarVector = playerInput.directionMagnitude * model.forward * walkSpeed *
-                           (playerInput.run ? runSpeed : 1.0f);
+            cameraController.LockTarget();
         }
+
+        if (!cameraController.lockState)
+        {
+            if (!planarLock)
+            {
+                planarVector = playerInput.directionMagnitude * model.forward * walkSpeed *
+                               (playerInput.run ? runSpeed : 1.0f);
+            }
+        }
+        else
+        {
+            if (!directionTrack)
+            {
+                model.transform.forward = transform.forward;
+            }
+            else
+            {
+                model.transform.forward = planarVector.normalized;
+            }
+            
+            if (!planarLock)
+            {
+                planarVector = playerInput.directionVector * walkSpeed *
+                               (playerInput.run ? runSpeed : 1.0f);
+            }
+        }
+
 
     }
 
@@ -82,6 +122,7 @@ public class ActorController : MonoBehaviour
     {
         playerInput.inputEnabled = false;
         planarLock = true;
+        directionTrack = true;
         thrustVector = new Vector3(0, jumpVelocity, 0);
     }
 
@@ -89,6 +130,7 @@ public class ActorController : MonoBehaviour
     {
         playerInput.inputEnabled = true;
         planarLock = false;
+        directionTrack = false;
         canAttack = true;
         
         collider.material = FrictionOne;
@@ -119,6 +161,7 @@ public class ActorController : MonoBehaviour
     {
         playerInput.inputEnabled = false;
         planarLock = true;
+        directionTrack = true;
         thrustVector = new Vector3(0, rollVelocity, 0);
     }
 

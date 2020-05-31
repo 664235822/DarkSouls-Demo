@@ -17,6 +17,8 @@ public class PlayerInput : MonoBehaviour
     public string keyX;
     public string keyY;
 
+    public string keyLock;
+
     [Header("Direction Outputs")]
     public float directionUp;
     public float directionRight;
@@ -31,6 +33,7 @@ public class PlayerInput : MonoBehaviour
     public bool jump;
     public bool attack;
     public bool defense;
+    public bool lockTarget;
 
     [Header("Other Settings")]
     public bool inputEnabled = true;
@@ -72,6 +75,8 @@ public class PlayerInput : MonoBehaviour
 
         jump = CrossPlatformInputManager.GetButtonDown(keyB);
         attack = CrossPlatformInputManager.GetButtonDown(keyX);
+
+        lockTarget = CrossPlatformInputManager.GetButtonDown(keyLock);
     }
 
     Vector2 SquareToCircle(Vector2 input)
