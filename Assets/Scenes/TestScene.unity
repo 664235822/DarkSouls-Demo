@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0.8734226, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -433,6 +434,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &985768520 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2543893232172581377, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2543893232593349674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fc702cac5be45bfa6bb02ca5fb0d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1303650721
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,10 +898,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2543893231632019504, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+        type: 3}
+      propertyPath: actorController
+      value: 
+      objectReference: {fileID: 985768520}
     - target: {fileID: 2543893232172581376, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
       propertyPath: m_Name
       value: ActorHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543893232172581377, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+        type: 3}
+      propertyPath: leftIsShield
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2543893232172581381, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}

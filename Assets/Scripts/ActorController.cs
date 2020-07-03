@@ -29,6 +29,8 @@ public class ActorController : MonoBehaviour
     private bool canAttack = true;
     private Vector3 deltaPosition;
 
+    public bool leftIsShield = true;
+
     // Update is called once per frame
     void Update()
     {
@@ -45,10 +47,7 @@ public class ActorController : MonoBehaviour
             anim.SetFloat("forward", localDVec.z * (playerInput.run ? 2.0f : 1.0f));
             anim.SetFloat("right", localDVec.x * (playerInput.run ? 2.0f : 1.0f));
         }
-        
 
-        anim.SetBool("defense", playerInput.defense);
-        
         if (rigid.velocity.magnitude > 5.0f)
         {
             anim.SetTrigger("roll");
@@ -60,9 +59,27 @@ public class ActorController : MonoBehaviour
             canAttack = false;
         }
 
-        if (playerInput.attack && (CheckState("ground") || CheckStateTag("attack")) && canAttack)
+        if ((playerInput.attackRight || playerInput.attackLeft) && (CheckState("ground") || CheckStateTag("attack")) && canAttack)
         {
+            anim.SetBool("mirror", playerInput.attackLeft && !leftIsShield);
             anim.SetTrigger("attack");
+        }
+
+        if (CheckState("ground") && leftIsShield)
+        {
+            if (playerInput.defense)
+            {
+                anim.SetBool("defense", playerInput.defense);
+                anim.SetLayerWeight(anim.GetLayerIndex("Defense"), 1);
+            }
+            else
+            {
+                anim.SetLayerWeight(anim.GetLayerIndex("Defense"), 0);
+            }
+        }
+        else
+        {
+            anim.SetLayerWeight(anim.GetLayerIndex("Defense"), 0);
         }
 
         if (playerInput.directionMagnitude > 0.1f)

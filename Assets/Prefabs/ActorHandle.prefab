@@ -116,8 +116,9 @@ MonoBehaviour:
   keyCameraRight: Mouse X
   keyA: Run
   keyB: Jump
-  keyX: Attack
-  keyY: Defense
+  keyX: AttackRight
+  keyY: AttackLeft
+  keyDefence: Defense
   keyLock: Lock
   directionUp: 0
   directionRight: 0

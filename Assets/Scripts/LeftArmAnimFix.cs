@@ -6,7 +6,7 @@ using UnityEngine;
 public class LeftArmAnimFix : MonoBehaviour
 {
     private Animator anim;
-
+    public ActorController actorController;
     public Vector3 leftLowerArmEuler;
     
     private void Awake()
@@ -16,11 +16,14 @@ public class LeftArmAnimFix : MonoBehaviour
 
     private void OnAnimatorIK(int layerIndex)
     {
-        if (!anim.GetBool("defense"))
+        if (actorController.leftIsShield)
         {
-            Transform leftLowerArm = anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
-            leftLowerArm.localEulerAngles += leftLowerArmEuler;
-            anim.SetBoneLocalRotation(HumanBodyBones.LeftLowerArm, Quaternion.Euler(leftLowerArm.localEulerAngles));
+            if (!anim.GetBool("defense"))
+            {
+                Transform leftLowerArm = anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
+                leftLowerArm.localEulerAngles += leftLowerArmEuler;
+                anim.SetBoneLocalRotation(HumanBodyBones.LeftLowerArm, Quaternion.Euler(leftLowerArm.localEulerAngles));
+            }
         }
     }
 }

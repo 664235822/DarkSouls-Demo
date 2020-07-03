@@ -17,6 +17,8 @@ public class PlayerInput : MonoBehaviour
     public string keyX;
     public string keyY;
 
+    public string keyDefence;
+
     public string keyLock;
 
     [Header("Direction Outputs")]
@@ -31,7 +33,8 @@ public class PlayerInput : MonoBehaviour
 
     public bool run;
     public bool jump;
-    public bool attack;
+    public bool attackRight;
+    public bool attackLeft;
     public bool defense;
     public bool lockTarget;
 
@@ -71,10 +74,11 @@ public class PlayerInput : MonoBehaviour
         directionVector = transform.forward * tempDirectionUp + transform.right * tempDirectionRight;
         
         run = CrossPlatformInputManager.GetButton(keyA);
-        defense = CrossPlatformInputManager.GetButton(keyY);
+        defense = CrossPlatformInputManager.GetButton(keyDefence);
 
         jump = CrossPlatformInputManager.GetButtonDown(keyB);
-        attack = CrossPlatformInputManager.GetButtonDown(keyX);
+        attackRight = CrossPlatformInputManager.GetButtonDown(keyX);
+        attackLeft = CrossPlatformInputManager.GetButtonDown(keyY);
 
         lockTarget = CrossPlatformInputManager.GetButtonDown(keyLock);
     }
