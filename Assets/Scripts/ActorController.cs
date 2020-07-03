@@ -27,7 +27,6 @@ public class ActorController : MonoBehaviour
     private bool directionTrack;
     private Vector3 thrustVector;
     private bool canAttack = true;
-    private float lerpTarget;
     private Vector3 deltaPosition;
 
     // Update is called once per frame
@@ -61,7 +60,7 @@ public class ActorController : MonoBehaviour
             canAttack = false;
         }
 
-        if (playerInput.attack && CheckState("ground") && canAttack)
+        if (playerInput.attack && (CheckState("ground") || CheckStateTag("attack")) && canAttack)
         {
             anim.SetTrigger("attack");
         }
@@ -116,6 +115,11 @@ public class ActorController : MonoBehaviour
     private bool CheckState(string stateName, string layerName = "Base Layer")
     {
         return anim.GetCurrentAnimatorStateInfo(anim.GetLayerIndex(layerName)).IsName(stateName);
+    }
+    
+    private bool CheckStateTag(string tagName, string layerName = "Base Layer")
+    {
+        return anim.GetCurrentAnimatorStateInfo(anim.GetLayerIndex(layerName)).IsTag(tagName);
     }
 
     public void OnJumpEnter()
@@ -175,32 +179,16 @@ public class ActorController : MonoBehaviour
     public void OnAttack1hAEnter()
     {
         playerInput.inputEnabled = false;
-        lerpTarget = 1.0f;
     }
 
     public void OnAttack1hAUpdate()
     {
         thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
-        float currentWeight = Mathf.Lerp(anim.GetLayerWeight(anim.GetLayerIndex("Attack")), lerpTarget, 0.1f);
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), currentWeight);
-    }
-    
-    public void OnAttackIdleEnter()
-    {
-        playerInput.inputEnabled = true;
-        lerpTarget = 0;
-    }
-
-    public void OnAttackIdleUpdate()
-    {
-        thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
-        float currentWeight = Mathf.Lerp(anim.GetLayerWeight(anim.GetLayerIndex("Attack")), lerpTarget, 0.1f);
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack"), currentWeight);
     }
 
     public void OnUpdateRootMotion(object deltaPosition)
     {
-        if (CheckState("attack1hC", "Attack"))
+        if (CheckState("attack1hC"))
         {
             this.deltaPosition += (Vector3) deltaPosition;
         }
