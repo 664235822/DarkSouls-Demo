@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
     public float cameraDampValue = 0.01f;
 
     public bool lockState;
+    public bool isAI = false;
 
     private float tempEulerX = 20.0f;
     private Vector3 smoothDampVelocity;
@@ -48,14 +49,15 @@ public class CameraController : MonoBehaviour
     {
         if (lockSprite.enabled)
         {
-            lockSprite.rectTransform.position =
-                camera.GetComponent<Camera>().WorldToScreenPoint(lockTarget.obj.transform.position +
-                                               new Vector3(0, lockTarget.halfHeight, 0));
+            if (!isAI)
+            {
+                lockSprite.rectTransform.position =
+                    camera.GetComponent<Camera>().WorldToScreenPoint(lockTarget.obj.transform.position +
+                                                                     new Vector3(0, lockTarget.halfHeight, 0));
+            }
             if (Vector3.Distance(model.transform.position, lockTarget.obj.transform.position) > 10.0f)
             {
-                lockTarget = null;
-                lockSprite.enabled = false;
-                lockState = false;
+                LockProcess(null, false, false);
             }
         }   
     }
@@ -65,9 +67,9 @@ public class CameraController : MonoBehaviour
         if (lockTarget == null)
         {
             Vector3 tempModelEuler = model.transform.eulerAngles;
-        
+
             playerHandle.transform.Rotate(Vector3.up, playerInput.cameraRight * MouseXSpeed * Time.fixedDeltaTime);
-        
+
             tempEulerX -= playerInput.cameraUp * MouseYSpeed * Time.fixedDeltaTime;
             tempEulerX = Mathf.Clamp(tempEulerX, -20, 30);
             cameraHandle.transform.localEulerAngles = new Vector3(tempEulerX, 0, 0);
@@ -81,11 +83,15 @@ public class CameraController : MonoBehaviour
             playerHandle.transform.forward = tempForward;
             cameraHandle.transform.LookAt(lockTarget.obj.transform);
         }
-        
 
-        camera.transform.position = Vector3.SmoothDamp(camera.GetComponent<Camera>().transform.position, transform.position,
-            ref smoothDampVelocity, cameraDampValue);
-        camera.transform.LookAt(cameraHandle.transform);
+
+        if (!isAI)
+        {
+            camera.transform.position = Vector3.SmoothDamp(camera.GetComponent<Camera>().transform.position,
+                transform.position,
+                ref smoothDampVelocity, cameraDampValue);
+            camera.transform.LookAt(cameraHandle.transform);
+        }
     }
 
     public void LockTarget()
@@ -98,9 +104,7 @@ public class CameraController : MonoBehaviour
 
         if (cols.Length == 0)
         {
-            lockTarget = null;
-            lockSprite.enabled = false;
-            lockState = false;
+            LockProcess(null, false, false);
         }
         else
         {
@@ -108,18 +112,24 @@ public class CameraController : MonoBehaviour
             {
                 if (lockTarget != null && lockTarget.obj == col.gameObject)
                 {
-                    lockTarget = null;
-                    lockSprite.enabled = false;
-                    lockState = false;
+                    LockProcess(null, false, false);
                     break;
                 }
-
-                lockTarget = new LockTargetObj(col.gameObject,col.bounds.extents.y);
-                lockSprite.enabled = true;
-                lockState = true;
+                LockProcess(new LockTargetObj(col.gameObject, col.bounds.extents.y), true, true);
                 break;
             }
         }
+    }
+
+    private void LockProcess(LockTargetObj _lockTarget, bool _lockSpriteEnable, bool _lockState)
+    {
+        lockTarget = _lockTarget;
+        if (!isAI)
+        {
+            lockSprite.enabled = _lockSpriteEnable;
+        }
+
+        lockState = _lockState;
     }
 }
 
