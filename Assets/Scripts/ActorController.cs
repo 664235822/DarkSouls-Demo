@@ -7,7 +7,7 @@ public class ActorController : MonoBehaviour
 {
     public Transform model;
     public Animator anim;
-    public PlayerInput playerInput;
+    public PlayerInputInterface playerInput;
     public Rigidbody rigid;
     public CameraController cameraController;
 

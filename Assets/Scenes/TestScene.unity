@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: leftIsShield
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2543893232172581377, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+        type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1260909412}
     - target: {fileID: 2543893232172581381, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -326,7 +331,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 436328421}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1260909411}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85fc702cac5be45bfa6bb02ca5fb0d89, type: 3}
@@ -583,6 +588,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85fc702cac5be45bfa6bb02ca5fb0d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1260909411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2543893232172581376, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+    type: 3}
+  m_PrefabInstance: {fileID: 436328421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260909412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260909411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b89c960c1c8f4c61a870cee501adc5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionUp: 0
+  directionRight: 0
+  cameraUp: 0
+  cameraRight: 0
+  directionMagnitude: 0
+  directionVector: {x: 0, y: 0, z: 0}
+  run: 0
+  jump: 0
+  attackRight: 0
+  attackLeft: 0
+  defense: 0
+  lockTarget: 0
+  inputEnabled: 1
 --- !u!1 &1303650721
 GameObject:
   m_ObjectHideFlags: 0

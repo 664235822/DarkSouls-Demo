@@ -110,6 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228302077581746ee904a94f9b0600c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionUp: 0
+  directionRight: 0
+  cameraUp: 0
+  cameraRight: 0
+  directionMagnitude: 0
+  directionVector: {x: 0, y: 0, z: 0}
+  run: 0
+  jump: 0
+  attackRight: 0
+  attackLeft: 0
+  defense: 0
+  lockTarget: 0
+  inputEnabled: 1
   keyDirectionUp: Vertical
   keyDirectionRight: Horizontal
   keyCameraUp: Mouse Y
@@ -120,18 +133,6 @@ MonoBehaviour:
   keyY: AttackLeft
   keyDefence: Defense
   keyLock: Lock
-  directionUp: 0
-  directionRight: 0
-  cameraUp: 0
-  cameraRight: 0
-  directionMagnitude: 0
-  directionVector: {x: 0, y: 0, z: 0}
-  run: 0
-  jump: 0
-  attack: 0
-  defense: 0
-  lockTarget: 0
-  inputEnabled: 1
 --- !u!114 &2543893232172581377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +157,7 @@ MonoBehaviour:
   collider: {fileID: 2543893232172581383}
   FrictionOne: {fileID: 13400000, guid: 10d486987d1704535880c3d0532bb6e7, type: 2}
   FrictionZero: {fileID: 13400000, guid: 509d34496962143138b1f6f3ad211012, type: 2}
+  leftIsShield: 1
 --- !u!114 &2543893231632019504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c624f991202724fd2aa5f89c07bd5515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actorController: {fileID: 0}
   leftLowerArmEuler: {x: -7.32, y: 56.5, z: -56.4}
 --- !u!114 &2543893231632019505
 MonoBehaviour:
@@ -446,6 +449,20 @@ MonoBehaviour:
   MouseYSpeed: 100
   cameraDampValue: 0.01
   lockState: 0
+  isAI: 0
+--- !u!65 &7456257845715499936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594751842948959603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2576963, y: 1.122835, z: 0.05518681}
+  m_Center: {x: -0.00000002996164, y: -0.33511543, z: -0.0000005342636}
 --- !u!1001 &2543893232510431957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -617,6 +634,12 @@ PrefabInstance:
 --- !u!4 &6594751842949058903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: d88774251fb25164eb7f0c56dcb0277b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6594751842948926419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6594751842948959603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: d88774251fb25164eb7f0c56dcb0277b,
     type: 3}
   m_PrefabInstance: {fileID: 6594751842948926419}
   m_PrefabAsset: {fileID: 0}
