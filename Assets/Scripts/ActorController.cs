@@ -210,4 +210,9 @@ public class ActorController : MonoBehaviour
             this.deltaPosition += (Vector3) deltaPosition;
         }
     }
+
+    public void OnHitEnter()
+    {
+        playerInput.inputEnabled = false;
+    }
 }
