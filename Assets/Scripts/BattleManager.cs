@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider))]
 public class BattleManager : MonoBehaviour
 {
+    public ActorManager actorManager;
+    
     private void OnTriggerEnter(Collider other)
     {
         print("hit");
