@@ -1086,11 +1086,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 2543893232172581377, guid: 5d89729eed11d4a53a4c6dca96f98df1,
-        type: 3}
-      propertyPath: leftIsShield
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2543893232172581381, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
       propertyPath: m_LocalPosition.x

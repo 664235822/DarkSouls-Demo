@@ -10,7 +10,10 @@ public class BattleManager : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        print("hit");
+        if (other.gameObject.layer == LayerMask.NameToLayer("Weapon"))
+        {
+            actorManager.DoDamage();
+        }
     }
     
     

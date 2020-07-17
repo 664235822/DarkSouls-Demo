@@ -214,5 +214,11 @@ public class ActorController : MonoBehaviour
     public void OnHitEnter()
     {
         playerInput.inputEnabled = false;
+        planarVector = Vector3.zero;
+    }
+
+    public void IssueTrigger(string triggerName)
+    {
+        anim.SetTrigger(triggerName);
     }
 }
