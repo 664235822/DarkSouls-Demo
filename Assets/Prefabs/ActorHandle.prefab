@@ -268,7 +268,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2543893233326057217}
   - component: {fileID: 2543893233326057222}
-  m_Layer: 0
+  - component: {fileID: 3358151853160919204}
+  - component: {fileID: 2349744935416481222}
+  m_Layer: 12
   m_Name: sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,6 +305,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capsuleCollider: {fileID: 2543893232172581383}
   offset: 0.3
+--- !u!136 &3358151853160919204
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893233326057216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2349744935416481222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893233326057216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9d243cb561e4f67b379b0e0ec0ba48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2543893233487306825
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +597,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2543893232637955554}
     m_Modifications:
+    - target: {fileID: 100000, guid: d88774251fb25164eb7f0c56dcb0277b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: d88774251fb25164eb7f0c56dcb0277b, type: 3}
       propertyPath: m_Name
       value: WP_A_0201out
