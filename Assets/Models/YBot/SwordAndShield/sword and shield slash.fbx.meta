@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 4831e51d07d01434a9767c5e91b2a464
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       1: 100000
@@ -413,7 +413,7 @@ ModelImporter:
     second: //RootNode
   - first:
       74: 7400000
-    second: mixamo.com
+    second: attack1hA
   - first:
       95: 9500000
     second: //RootNode
@@ -446,7 +446,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: attack1hA
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
@@ -502,6 +502,20 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.39863485
+        functionName: WeaponEnable
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5106383
+        functionName: WeaponDisable
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -518,6 +532,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

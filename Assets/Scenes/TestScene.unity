@@ -265,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 2543893232172581381, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2543893232172581381, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
@@ -523,7 +523,7 @@ RectTransform:
   m_Children:
   - {fileID: 382813953}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -560,7 +560,7 @@ Transform:
   m_Children:
   - {fileID: 1463841304}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &753689179
 CapsuleCollider:
@@ -576,18 +576,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &985768520 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2543893232172581377, guid: 5d89729eed11d4a53a4c6dca96f98df1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2543893232593349674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85fc702cac5be45bfa6bb02ca5fb0d89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1260909411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2543893232172581376, guid: 5d89729eed11d4a53a4c6dca96f98df1,
@@ -854,7 +842,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751332757
 GameObject:
@@ -1048,7 +1036,7 @@ Transform:
   m_Children:
   - {fileID: 1751332761}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1938482766
 CapsuleCollider:
@@ -1071,11 +1059,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2543893231632019504, guid: 5d89729eed11d4a53a4c6dca96f98df1,
-        type: 3}
-      propertyPath: actorController
-      value: 
-      objectReference: {fileID: 985768520}
     - target: {fileID: 2543893232172581376, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
       propertyPath: m_Name

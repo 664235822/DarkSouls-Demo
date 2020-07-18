@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c624f991202724fd2aa5f89c07bd5515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actorController: {fileID: 0}
+  actorController: {fileID: 2543893232172581377}
   leftLowerArmEuler: {x: -7.32, y: 56.5, z: -56.4}
 --- !u!114 &2543893231632019505
 MonoBehaviour:
@@ -211,6 +211,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cca97a86c2664c35ba18654317fbf43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2705323099410560064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893232510334389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b033f7671c93446d9a87b50e7a8b8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 7456257845715499936}
 --- !u!1 &2543893232637955565
 GameObject:
   m_ObjectHideFlags: 0
