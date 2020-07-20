@@ -287,6 +287,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2543893232637955565, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+        type: 3}
+      propertyPath: m_Name
+      value: WeaponHandleR
+      objectReference: {fileID: 0}
     - target: {fileID: 2543893233487306830, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1123,6 +1128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543893232637955565, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+        type: 3}
+      propertyPath: m_Name
+      value: WeaponHandleR
       objectReference: {fileID: 0}
     - target: {fileID: 2543893233487306830, guid: 5d89729eed11d4a53a4c6dca96f98df1,
         type: 3}

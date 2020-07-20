@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DummyInput : PlayerInputInterface
+public class WeaponController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        targetDirectionUp = 0;
-        targetDirectionRight = 0;
-
-        attackRight = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateMovement();
+        
     }
-    
 }

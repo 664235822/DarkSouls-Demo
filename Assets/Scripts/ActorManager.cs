@@ -6,6 +6,7 @@ public class ActorManager : MonoBehaviour
 {
     public ActorController actorController;
     public BattleManager battleManager;
+    public WeaponManager weaponManager;
 
     // Start is called before the first frame update
     void Start()

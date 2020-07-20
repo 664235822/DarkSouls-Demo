@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
-    public BoxCollider weaponCollider;
+    public ActorManager actorManager;
+
+    [SerializeField] GameObject leftHandle;
+    [SerializeField] GameObject rightHandle;
+    
+    [SerializeField] BoxCollider leftWeaponCollider;
+    [SerializeField] BoxCollider rightWeaponCollider;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        leftHandle = transform.DeepFind("WeaponHandleL").gameObject;
+        rightHandle = transform.DeepFind("WeaponHandleR").gameObject;
+
+        leftWeaponCollider = leftHandle.transform.GetComponentInChildren<BoxCollider>();
+        rightWeaponCollider = rightHandle.transform.GetComponentInChildren<BoxCollider>();
+    }
     
     public void WeaponEnable()
     {
-        weaponCollider.enabled = true;
+        if (actorManager.actorController.CheckStateTag("attackR"))
+        {
+            rightWeaponCollider.enabled = true;
+        }
+        else if (actorManager.actorController.CheckStateTag("attackL"))
+        {
+            leftWeaponCollider.enabled = true;
+        }
+
     }
 
     public void WeaponDisable()
     {
-        weaponCollider.enabled = false;
+        rightWeaponCollider.enabled = false;
+        leftWeaponCollider.enabled = false;
     }
 }

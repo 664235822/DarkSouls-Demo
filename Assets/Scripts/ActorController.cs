@@ -59,7 +59,8 @@ public class ActorController : MonoBehaviour
             canAttack = false;
         }
 
-        if ((playerInput.attackRight || playerInput.attackLeft) && (CheckState("ground") || CheckStateTag("attack")) && canAttack)
+        if ((playerInput.attackRight || playerInput.attackLeft) &&
+            (CheckState("ground") || CheckStateTag("attackR") || CheckStateTag("attackL")) && canAttack)
         {
             anim.SetBool("mirror", playerInput.attackLeft && !leftIsShield);
             anim.SetTrigger("attack");
@@ -129,12 +130,12 @@ public class ActorController : MonoBehaviour
         deltaPosition = Vector3.zero;
     }
 
-    private bool CheckState(string stateName, string layerName = "Base Layer")
+    public bool CheckState(string stateName, string layerName = "Base Layer")
     {
         return anim.GetCurrentAnimatorStateInfo(anim.GetLayerIndex(layerName)).IsName(stateName);
     }
     
-    private bool CheckStateTag(string tagName, string layerName = "Base Layer")
+    public bool CheckStateTag(string tagName, string layerName = "Base Layer")
     {
         return anim.GetCurrentAnimatorStateInfo(anim.GetLayerIndex(layerName)).IsTag(tagName);
     }
@@ -201,6 +202,11 @@ public class ActorController : MonoBehaviour
     public void OnAttack1hAUpdate()
     {
         thrustVector = model.transform.forward * anim.GetFloat("attack1hAVelocity");
+    }
+
+    public void OnAttackExit()
+    {
+        model.SendMessage("WeaponDisable");
     }
 
     public void OnUpdateRootMotion(object deltaPosition)
