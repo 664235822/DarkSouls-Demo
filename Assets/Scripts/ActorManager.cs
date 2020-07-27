@@ -13,18 +13,39 @@ public class ActorManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void TryDoDamage()
     {
-        stateManager.AddHP(-5.0f);
+        if (stateManager.HP > 0)
+        {
+            stateManager.AddHP(-5.0f);
+        }
+       
+        
+    }
+
+    public void Hit()
+    {
         actorController.IssueTrigger("hit");
     }
+
+    public void Die()
+    {
+        actorController.IssueTrigger("die");
+        actorController.playerInput.inputEnabled = false;
+        if (actorController.cameraController.lockState)
+        {
+            actorController.cameraController.lockState = false;
+        }
+        actorController.cameraController.enabled = false;
+    }
+
 }

@@ -55,11 +55,12 @@ public class CameraController : MonoBehaviour
                     camera.GetComponent<Camera>().WorldToScreenPoint(lockTarget.obj.transform.position +
                                                                      new Vector3(0, lockTarget.halfHeight, 0));
             }
+
             if (Vector3.Distance(model.transform.position, lockTarget.obj.transform.position) > 10.0f)
             {
                 LockProcess(null, false, false);
             }
-        }   
+        }
     }
 
     void FixedUpdate()

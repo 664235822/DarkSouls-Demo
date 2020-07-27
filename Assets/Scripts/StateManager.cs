@@ -12,12 +12,21 @@ public class StateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AddHP(0);   
+        HP = HP_Max;
     }
     
     public void AddHP(float value)
     {
         HP += value;
         HP = Mathf.Clamp(HP, 0, HP_Max);
+
+        if (HP > 0)
+        {
+            actorManager.Hit();
+        }
+        else
+        {
+            actorManager.Die();
+        }
     }
 }
