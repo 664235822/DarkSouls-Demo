@@ -7,6 +7,8 @@ public class ActorManager : MonoBehaviour
     public ActorController actorController;
     public BattleManager battleManager;
     public WeaponManager weaponManager;
+    public ActorManager actorManager;
+    public StateManager stateManager;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +22,9 @@ public class ActorManager : MonoBehaviour
         
     }
 
-    public void DoDamage()
+    public void TryDoDamage()
     {
+        stateManager.AddHP(-5.0f);
         actorController.IssueTrigger("hit");
     }
 }

@@ -12,7 +12,7 @@ public class BattleManager : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Weapon"))
         {
-            actorManager.DoDamage();
+            actorManager.TryDoDamage();
         }
     }
     

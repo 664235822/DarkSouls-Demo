@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2543893232172581382}
   - component: {fileID: 2543893232172581377}
   - component: {fileID: 1362523660812186269}
+  - component: {fileID: 1791235979497496667}
   m_Layer: 0
   m_Name: ActorHandle
   m_TagString: Untagged
@@ -174,6 +175,22 @@ MonoBehaviour:
   actorController: {fileID: 2543893232172581377}
   battleManager: {fileID: 2349744935416481222}
   weaponManager: {fileID: 2705323099410560064}
+  actorManager: {fileID: 1362523660812186269}
+  stateManager: {fileID: 1791235979497496667}
+--- !u!114 &1791235979497496667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893232172581376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ca2c5cb8a684a178cea8344d7b181b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorManager: {fileID: 1362523660812186269}
+  HP: 15
 --- !u!114 &2543893231632019504
 MonoBehaviour:
   m_ObjectHideFlags: 0
