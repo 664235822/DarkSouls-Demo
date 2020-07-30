@@ -18,7 +18,7 @@ public class LeftArmAnimFix : MonoBehaviour
     {
         if (actorController.leftIsShield)
         {
-            if (!anim.GetBool("defense"))
+            if (!anim.GetBool("defence"))
             {
                 Transform leftLowerArm = anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
                 leftLowerArm.localEulerAngles += leftLowerArmEuler;

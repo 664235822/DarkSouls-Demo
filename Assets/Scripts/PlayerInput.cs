@@ -40,7 +40,7 @@ public class PlayerInput : PlayerInputInterface
         UpdateMovement();
 
         run = CrossPlatformInputManager.GetButton(keyA);
-        defense = CrossPlatformInputManager.GetButton(keyDefence);
+        defence = CrossPlatformInputManager.GetButton(keyDefence);
 
         jump = CrossPlatformInputManager.GetButtonDown(keyB);
         attackRight = CrossPlatformInputManager.GetButtonDown(keyX);

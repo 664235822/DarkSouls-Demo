@@ -609,7 +609,7 @@ MonoBehaviour:
   jump: 0
   attackRight: 0
   attackLeft: 0
-  defense: 0
+  defence: 0
   lockTarget: 0
   inputEnabled: 1
 --- !u!1 &1303650721

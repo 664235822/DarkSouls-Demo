@@ -68,19 +68,20 @@ public class ActorController : MonoBehaviour
 
         if (CheckState("ground") && leftIsShield)
         {
-            if (playerInput.defense)
+            if (playerInput.defence)
             {
-                anim.SetBool("defense", playerInput.defense);
-                anim.SetLayerWeight(anim.GetLayerIndex("Defense"), 1);
+                anim.SetBool("defence", playerInput.defence);
+                anim.SetLayerWeight(anim.GetLayerIndex("Defence"), 1);
             }
             else
             {
-                anim.SetLayerWeight(anim.GetLayerIndex("Defense"), 0);
+                anim.SetBool("defence", playerInput.defence);
+                anim.SetLayerWeight(anim.GetLayerIndex("Defence"), 0);
             }
         }
         else
         {
-            anim.SetLayerWeight(anim.GetLayerIndex("Defense"), 0);
+            anim.SetLayerWeight(anim.GetLayerIndex("Defence"), 0);
         }
 
         if (playerInput.directionMagnitude > 0.1f)

@@ -122,7 +122,7 @@ MonoBehaviour:
   jump: 0
   attackRight: 0
   attackLeft: 0
-  defense: 0
+  defence: 0
   lockTarget: 0
   inputEnabled: 1
   keyDirectionUp: Vertical
@@ -133,7 +133,7 @@ MonoBehaviour:
   keyB: Jump
   keyX: AttackRight
   keyY: AttackLeft
-  keyDefence: Defense
+  keyDefence: Defence
   keyLock: Lock
 --- !u!114 &2543893232172581377
 MonoBehaviour:
@@ -191,6 +191,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorManager: {fileID: 1362523660812186269}
   HP: 15
+  HP_Max: 15
+  isGround: 0
+  isJump: 0
+  isFall: 0
+  isRoll: 0
+  isJab: 0
+  isAttack: 0
+  isHit: 0
+  isDie: 0
+  isBlocked: 0
+  isDefence: 0
 --- !u!114 &2543893231632019504
 MonoBehaviour:
   m_ObjectHideFlags: 0

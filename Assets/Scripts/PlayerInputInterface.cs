@@ -18,7 +18,7 @@ public class PlayerInputInterface : MonoBehaviour
     public bool jump;
     public bool attackRight;
     public bool attackLeft;
-    public bool defense;
+    public bool defence;
     public bool lockTarget;
 
     [Header("Other Settings")]
