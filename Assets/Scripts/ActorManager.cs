@@ -24,7 +24,11 @@ public class ActorManager : MonoBehaviour
 
     public void TryDoDamage()
     {
-        if (stateManager.isDefence)
+        if (stateManager.isImmortal)
+        {
+            
+        }
+        else if (stateManager.isDefence)
         {
             Blocked();
         }

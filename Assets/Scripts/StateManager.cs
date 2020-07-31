@@ -23,6 +23,7 @@ public class StateManager : MonoBehaviour
 
     [Header("第二状态")]
     public bool isAllowDefence;
+    public bool isImmortal;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,8 @@ public class StateManager : MonoBehaviour
 
         isAllowDefence = isBlocked || isGround;
         isDefence = isAllowDefence && actorManager.actorController.CheckState("defence1h", "Defence");
+
+        isImmortal = isRoll || isJab;
     }
 
     public void AddHP(float value)
