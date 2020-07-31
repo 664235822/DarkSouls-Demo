@@ -66,7 +66,7 @@ public class ActorController : MonoBehaviour
             anim.SetTrigger("attack");
         }
 
-        if (CheckState("ground") && leftIsShield)
+        if ((CheckState("ground") || CheckState("blocked")) && leftIsShield)
         {
             if (playerInput.defence)
             {
@@ -224,6 +224,17 @@ public class ActorController : MonoBehaviour
         planarVector = Vector3.zero;
     }
 
+    public void OnBlockedEnter()
+    {
+        playerInput.inputEnabled = false;
+    }
+
+    public void OnDieEnter()
+    {
+        playerInput.inputEnabled = false;
+        planarVector = Vector3.zero;
+    }
+    
     public void IssueTrigger(string triggerName)
     {
         anim.SetTrigger(triggerName);

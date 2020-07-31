@@ -24,20 +24,38 @@ public class ActorManager : MonoBehaviour
 
     public void TryDoDamage()
     {
-        if (stateManager.HP > 0)
+        if (stateManager.isDefence)
         {
-            stateManager.AddHP(-5.0f);
+            Blocked();
         }
-       
-        
+        else
+        {
+            if (stateManager.HP > 0)
+            {
+                stateManager.AddHP(-5.0f);
+                if (stateManager.HP > 0)
+                {
+                    Hit();
+                }
+                else
+                {
+                    Die();
+                }
+            }
+        }
     }
 
-    public void Hit()
+    private void Blocked()
+    {
+        actorController.IssueTrigger("blocked");
+    }
+    
+    private void Hit()
     {
         actorController.IssueTrigger("hit");
     }
 
-    public void Die()
+    private void Die()
     {
         actorController.IssueTrigger("die");
         actorController.playerInput.inputEnabled = false;

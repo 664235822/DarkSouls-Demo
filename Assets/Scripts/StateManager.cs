@@ -9,6 +9,7 @@ public class StateManager : MonoBehaviour
     public float HP = 15.0f;
     public float HP_Max = 15.0f;
 
+    [Header("第一状态")]
     public bool isGround;
     public bool isJump;
     public bool isFall;
@@ -19,6 +20,9 @@ public class StateManager : MonoBehaviour
     public bool isDie;
     public bool isBlocked;
     public bool isDefence;
+
+    [Header("第二状态")]
+    public bool isAllowDefence;
 
     // Start is called before the first frame update
     void Start()
@@ -39,21 +43,15 @@ public class StateManager : MonoBehaviour
         isHit = actorManager.actorController.CheckState("hit");
         isDie = actorManager.actorController.CheckState("die");
         isBlocked = actorManager.actorController.CheckState("block");
-        isDefence = actorManager.actorController.CheckState("defence1h", "Defence");
+        //isDefence = actorManager.actorController.CheckState("defence1h", "Defence");
+
+        isAllowDefence = isBlocked || isGround;
+        isDefence = isAllowDefence && actorManager.actorController.CheckState("defence1h", "Defence");
     }
 
     public void AddHP(float value)
     {
         HP += value;
         HP = Mathf.Clamp(HP, 0, HP_Max);
-
-        if (HP > 0)
-        {
-            actorManager.Hit();
-        }
-        else
-        {
-            actorManager.Die();
-        }
     }
 }
