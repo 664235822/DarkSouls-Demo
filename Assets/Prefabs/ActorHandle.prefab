@@ -202,20 +202,8 @@ MonoBehaviour:
   isDie: 0
   isBlocked: 0
   isDefence: 0
---- !u!114 &2543893231632019504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2543893232510334389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c624f991202724fd2aa5f89c07bd5515, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorController: {fileID: 2543893232172581377}
-  leftLowerArmEuler: {x: -7.32, y: 56.5, z: -56.4}
+  isAllowDefence: 0
+  isImmortal: 0
 --- !u!114 &2543893231632019505
 MonoBehaviour:
   m_ObjectHideFlags: 0
