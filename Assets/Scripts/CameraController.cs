@@ -27,11 +27,13 @@ public class CameraController : MonoBehaviour
     {
         public GameObject obj;
         public float halfHeight;
+        public ActorManager actorManager;
 
         public LockTargetObj(GameObject _obj,float _halfHeight)
         {
             obj = _obj;
             halfHeight = _halfHeight;
+            actorManager = _obj.GetComponent<ActorManager>();
         }
     }
     
@@ -59,6 +61,14 @@ public class CameraController : MonoBehaviour
             if (Vector3.Distance(model.transform.position, lockTarget.obj.transform.position) > 10.0f)
             {
                 LockProcess(null, false, false);
+            }
+
+            if (lockTarget.actorManager != null)
+            {
+                if (lockTarget.actorManager.stateManager.isDie)
+                {
+                    LockProcess(null, false, false);
+                }
             }
         }
     }

@@ -22,13 +22,13 @@ public class ActorManager : MonoBehaviour
 
     }
 
-    public void TryDoDamage(WeaponController target)
+    public void TryDoDamage(WeaponController target, bool attackValid, bool counterValid)
     {
         if (stateManager.isImmortal)
         {
-            
+
         }
-        else if (stateManager.isCounterBack)
+        else if (stateManager.isCounterBack && counterValid)
         {
             target.weaponManager.actorManager.Stunned();
         }
@@ -38,7 +38,7 @@ public class ActorManager : MonoBehaviour
         }
         else
         {
-            if (stateManager.HP > 0)
+            if (stateManager.HP > 0 && attackValid)
             {
                 stateManager.AddHP(-5.0f);
                 if (stateManager.HP > 0)

@@ -231,6 +231,7 @@ public class ActorController : MonoBehaviour
     {
         playerInput.inputEnabled = false;
         planarVector = Vector3.zero;
+        model.SendMessage("WeaponDisable");
     }
 
     public void OnBlockedEnter()
@@ -242,6 +243,7 @@ public class ActorController : MonoBehaviour
     {
         playerInput.inputEnabled = false;
         planarVector = Vector3.zero;
+        model.SendMessage("WeaponDisable");
     }
 
     public void OnStunnedEnter()
