@@ -17,7 +17,7 @@ ModelImporter:
     second: a20_3400
   - first:
       74: 5936081455157605705
-    second: a20_5100
+    second: counterBack
   - first:
       74: -236268819287650220
     second: stunned
@@ -212,23 +212,23 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: a20_5100
+      name: counterBack
       takeName: a20_5100
       internalID: 0
       firstFrame: 0
       lastFrame: 35
       wrapMode: 0
-      orientationOffsetY: 0
+      orientationOffsetY: 180
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0

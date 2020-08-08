@@ -234,6 +234,18 @@ public class ActorController : MonoBehaviour
         playerInput.inputEnabled = false;
         planarVector = Vector3.zero;
     }
+
+    public void OnStunnedEnter()
+    {
+        playerInput.inputEnabled = false;
+        planarVector = Vector3.zero;
+    }
+
+    public void OnCounterBackEnter()
+    {
+        playerInput.inputEnabled = false;
+        planarVector = Vector3.zero;
+    }
     
     public void IssueTrigger(string triggerName)
     {
