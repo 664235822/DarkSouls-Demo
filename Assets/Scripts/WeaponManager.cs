@@ -11,6 +11,9 @@ public class WeaponManager : MonoBehaviour
     
     [SerializeField] BoxCollider leftWeaponCollider;
     [SerializeField] BoxCollider rightWeaponCollider;
+
+    [SerializeField] WeaponController leftWeaponController;
+    [SerializeField] WeaponController rightWeaponController;
     
     // Start is called before the first frame update
     void Start()
@@ -18,8 +21,24 @@ public class WeaponManager : MonoBehaviour
         leftHandle = transform.DeepFind("WeaponHandleL").gameObject;
         rightHandle = transform.DeepFind("WeaponHandleR").gameObject;
 
+        leftWeaponController = BindWeaponController(leftHandle);
+        rightWeaponController = BindWeaponController(rightHandle);
+
         leftWeaponCollider = leftHandle.transform.GetComponentInChildren<BoxCollider>();
         rightWeaponCollider = rightHandle.transform.GetComponentInChildren<BoxCollider>();
+    }
+
+    public WeaponController BindWeaponController(GameObject target)
+    {
+        WeaponController temp;
+        temp = target.GetComponent<WeaponController>();
+        if (temp == null)
+        {
+            temp = target.AddComponent<WeaponController>();
+        }
+
+        temp.weaponManager = this;
+        return temp;
     }
     
     public void WeaponEnable()
