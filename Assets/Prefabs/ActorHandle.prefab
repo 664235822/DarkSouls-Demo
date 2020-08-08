@@ -124,6 +124,7 @@ MonoBehaviour:
   attackLeft: 0
   defence: 0
   lockTarget: 0
+  counterBack: 0
   inputEnabled: 1
   keyDirectionUp: Vertical
   keyDirectionRight: Horizontal
@@ -135,6 +136,7 @@ MonoBehaviour:
   keyY: AttackLeft
   keyDefence: Defence
   keyLock: Lock
+  keyCounterBack: CounterBack
 --- !u!114 &2543893232172581377
 MonoBehaviour:
   m_ObjectHideFlags: 0

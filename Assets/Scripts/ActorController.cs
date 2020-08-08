@@ -66,6 +66,15 @@ public class ActorController : MonoBehaviour
             anim.SetTrigger("attack");
         }
 
+        if ((playerInput.counterBack) && (CheckState("ground") || CheckStateTag("attackR") || CheckStateTag("attackL")) &&
+            canAttack)
+        {
+            if (!leftIsShield)
+            {
+                anim.SetTrigger("counterBack");
+            }
+        }
+
         if ((CheckState("ground") || CheckState("blocked")) && leftIsShield)
         {
             if (playerInput.defence)
