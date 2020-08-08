@@ -10,9 +10,11 @@ public class BattleManager : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        WeaponController targetController = other.GetComponentInParent<WeaponController>();
+        
         if (other.gameObject.layer == LayerMask.NameToLayer("Weapon"))
         {
-            actorManager.TryDoDamage();
+            actorManager.TryDoDamage(targetController);
         }
     }
     

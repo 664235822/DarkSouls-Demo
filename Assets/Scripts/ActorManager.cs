@@ -22,11 +22,15 @@ public class ActorManager : MonoBehaviour
 
     }
 
-    public void TryDoDamage()
+    public void TryDoDamage(WeaponController target)
     {
         if (stateManager.isImmortal)
         {
             
+        }
+        else if (stateManager.isCounterBack)
+        {
+            target.weaponManager.actorManager.Stunned();
         }
         else if (stateManager.isDefence)
         {
@@ -59,6 +63,16 @@ public class ActorManager : MonoBehaviour
         actorController.IssueTrigger("hit");
     }
 
+    public void Stunned()
+    {
+        actorController.IssueTrigger("stunned");
+    }
+
+    public void SetIsCounterBack(bool value)
+    {
+        stateManager.isCounterBack = value;
+    }
+    
     private void Die()
     {
         actorController.IssueTrigger("die");

@@ -20,6 +20,7 @@ public class StateManager : MonoBehaviour
     public bool isDie;
     public bool isBlocked;
     public bool isDefence;
+    public bool isCounterBack;
 
     [Header("第二状态")]
     public bool isAllowDefence;
@@ -45,6 +46,7 @@ public class StateManager : MonoBehaviour
         isDie = actorManager.actorController.CheckState("die");
         isBlocked = actorManager.actorController.CheckState("block");
         //isDefence = actorManager.actorController.CheckState("defence1h", "Defence");
+        isCounterBack = actorManager.actorController.CheckState("counterBack");
 
         isAllowDefence = isBlocked || isGround;
         isDefence = isAllowDefence && actorManager.actorController.CheckState("defence1h", "Defence");
@@ -56,5 +58,10 @@ public class StateManager : MonoBehaviour
     {
         HP += value;
         HP = Mathf.Clamp(HP, 0, HP_Max);
+    }
+
+    public void SetIsCounterBack()
+    {
+        
     }
 }

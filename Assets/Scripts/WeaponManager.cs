@@ -59,4 +59,14 @@ public class WeaponManager : MonoBehaviour
         rightWeaponCollider.enabled = false;
         leftWeaponCollider.enabled = false;
     }
+
+    public void CounterBackEnable()
+    {
+        actorManager.SetIsCounterBack(true);
+    }
+
+    public void CounterBackDisable()
+    {
+        actorManager.SetIsCounterBack(false);
+    }
 }
