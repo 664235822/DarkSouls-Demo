@@ -198,12 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382813952}
   m_CullTransparentMesh: 0
---- !u!95 &459954450 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2543893232519808949, guid: 5d89729eed11d4a53a4c6dca96f98df1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2543893232593349674}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &513421884
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,9 +894,9 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -5506451336102940433, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
-    value: {fileID: 459954450}
+    value: {fileID: 0}
   - key: {fileID: 4362352135597970817, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
-    value: {fileID: 6889107399012124444}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1896504525
