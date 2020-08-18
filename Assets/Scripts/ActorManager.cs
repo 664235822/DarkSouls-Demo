@@ -84,4 +84,8 @@ public class ActorManager : MonoBehaviour
         actorController.cameraController.enabled = false;
     }
 
+    public void Lock(bool value)
+    {
+        actorController.SetBool("lock", value);
+    }
 }

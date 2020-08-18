@@ -262,4 +262,9 @@ public class ActorController : MonoBehaviour
     {
         anim.SetTrigger(triggerName);
     }
+
+    public void SetBool(string animName, bool value)
+    {
+        anim.SetBool(animName, value);
+    }
 }

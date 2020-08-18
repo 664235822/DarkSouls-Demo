@@ -393,6 +393,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &609517049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1362523660812186269, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2543893232593349674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00e265a90f4444c0a3afffff82b3d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &753689177
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +451,12 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &827894911 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2543893232519808949, guid: 5d89729eed11d4a53a4c6dca96f98df1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2543893232593349674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1223689657
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,11 +912,17 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -5506451336102940433, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 827894911}
   - key: {fileID: 4362352135597970817, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 6889107399012124444}
+  - key: {fileID: 7959966503507826398, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
+    value: {fileID: 609517049}
+  - key: {fileID: -5013614725488666181, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
+    value: {fileID: 1362523660711601528}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 20e07595d66414ed3b5e0936ced25ab2: {fileID: 1896504527}
+    - 422b05ec666d2470a8489ef9d2174a57: {fileID: 1896504527}
 --- !u!1 &1896504525
 GameObject:
   m_ObjectHideFlags: 0
