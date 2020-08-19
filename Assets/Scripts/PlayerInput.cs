@@ -23,6 +23,8 @@ public class PlayerInput : PlayerInputInterface
 
     public string keyCounterBack;
 
+    public string keyAction;
+
     // Update is called once per frame
     void Update()
     {
@@ -51,5 +53,7 @@ public class PlayerInput : PlayerInputInterface
         lockTarget = CrossPlatformInputManager.GetButtonDown(keyLock);
 
         counterBack = CrossPlatformInputManager.GetButtonDown(keyCounterBack);
+
+        action = CrossPlatformInputManager.GetButtonDown(keyAction);
     }
 }

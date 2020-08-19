@@ -31,6 +31,9 @@ public class ActorController : MonoBehaviour
 
     public bool leftIsShield = true;
 
+    public delegate void OnActionDelegate();
+    public event OnActionDelegate OnAction;
+
     // Update is called once per frame
     void Update()
     {
@@ -74,6 +77,8 @@ public class ActorController : MonoBehaviour
                 anim.SetTrigger("counterBack");
             }
         }
+        
+        
 
         if ((CheckState("ground") || CheckState("blocked")) && leftIsShield)
         {
@@ -91,6 +96,11 @@ public class ActorController : MonoBehaviour
         else
         {
             anim.SetLayerWeight(anim.GetLayerIndex("Defence"), 0);
+        }
+
+        if (playerInput.action)
+        {
+            OnAction.Invoke();
         }
 
         if (playerInput.directionMagnitude > 0.1f)

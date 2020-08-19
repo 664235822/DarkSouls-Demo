@@ -21,6 +21,7 @@ public class PlayerInputInterface : MonoBehaviour
     public bool defence;
     public bool lockTarget;
     public bool counterBack;
+    public bool action;
 
     [Header("Other Settings")]
     public bool inputEnabled = true;
