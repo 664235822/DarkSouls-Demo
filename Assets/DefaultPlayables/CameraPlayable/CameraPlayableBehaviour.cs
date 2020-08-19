@@ -11,7 +11,7 @@ public class CameraPlayableBehaviour : PlayableBehaviour
 
     ActorManager actorManager;
 
-    public override void OnPlayableCreate (Playable playable)
+    public override void OnPlayableCreate(Playable playable)
     {
         PlayableDirector playableDirector = (PlayableDirector) playable.GetGraph().GetResolver();
         foreach (var track in playableDirector.playableAsset.outputs)
@@ -25,11 +25,11 @@ public class CameraPlayableBehaviour : PlayableBehaviour
 
     public override void OnGraphStart(Playable playable)
     {
-        actorManager.Lock(true);
+        if (actorManager) actorManager.Lock(true);
     }
 
     public override void OnGraphStop(Playable playable)
     {
-        actorManager.Lock(false);
+        if (actorManager) actorManager.Lock(false);
     }
 }

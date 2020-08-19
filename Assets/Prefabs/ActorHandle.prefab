@@ -46,9 +46,11 @@ GameObject:
   - component: {fileID: 2543893232172581377}
   - component: {fileID: 1362523660812186269}
   - component: {fileID: 1791235979497496667}
+  - component: {fileID: 8444973204703872110}
+  - component: {fileID: 5065835953706539791}
   m_Layer: 0
   m_Name: ActorHandle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
   weaponManager: {fileID: 2705323099410560064}
   actorManager: {fileID: 1362523660812186269}
   stateManager: {fileID: 1791235979497496667}
+  directorManager: {fileID: 0}
 --- !u!114 &1791235979497496667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,8 +207,43 @@ MonoBehaviour:
   isDie: 0
   isBlocked: 0
   isDefence: 0
+  isCounterBack: 0
   isAllowDefence: 0
   isImmortal: 0
+--- !u!320 &8444973204703872110
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893232172581376}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &5065835953706539791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893232172581376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f194b4ec0a46b6af4c7471347a2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorManager: {fileID: 1362523660812186269}
+  playableDirector: {fileID: 8444973204703872110}
+  attacker: {fileID: 1362523660812186269}
+  victim: {fileID: 0}
+  timelineAsset: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
 --- !u!114 &2543893231632019505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +285,8 @@ MonoBehaviour:
   rightHandle: {fileID: 0}
   leftWeaponCollider: {fileID: 0}
   rightWeaponCollider: {fileID: 0}
+  leftWeaponController: {fileID: 0}
+  rightWeaponController: {fileID: 0}
 --- !u!1 &2543893232637955565
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +479,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -463,6 +504,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2543893233487306831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -630,6 +672,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -654,6 +697,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &8110194570142380566
 BoxCollider:
   m_ObjectHideFlags: 0

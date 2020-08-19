@@ -9,6 +9,7 @@ public class ActorManager : MonoBehaviour
     public WeaponManager weaponManager;
     public ActorManager actorManager;
     public StateManager stateManager;
+    public DirectorManager directorManager;
 
     // Start is called before the first frame update
     void Start()
