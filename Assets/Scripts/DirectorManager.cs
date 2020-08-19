@@ -8,15 +8,27 @@ using UnityEngine.Timeline;
 public class DirectorManager : IActorManagerInterface
 {
     public PlayableDirector playableDirector;
-    public ActorManager attacker;
-    public ActorManager victim;
 
-    public TimelineAsset timelineAsset;
+    public TimelineAsset frontStab;
 
     // Start is called before the first frame update
     void Start()
     {
-        playableDirector.playableAsset = timelineAsset;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H) && gameObject.tag == "Player")
+        {
+            playableDirector.Play();
+        }
+    }
+
+    public void PlayFrontStab(string timelineName, ActorManager attacker, ActorManager victim)
+    {
+        playableDirector.playableAsset = Instantiate(frontStab);
 
         foreach (var track in playableDirector.playableAsset.outputs)
         {
@@ -39,13 +51,5 @@ public class DirectorManager : IActorManagerInterface
 
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H) && gameObject.tag == "Player")
-        {
-            playableDirector.Play();
-        }
-    }
+    
 }

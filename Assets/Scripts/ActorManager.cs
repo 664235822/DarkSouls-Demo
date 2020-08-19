@@ -7,7 +7,6 @@ public class ActorManager : MonoBehaviour
     public ActorController actorController;
     public BattleManager battleManager;
     public WeaponManager weaponManager;
-    public ActorManager actorManager;
     public StateManager stateManager;
     public DirectorManager directorManager;
     public InteractionManager interactionManager;
@@ -15,7 +14,7 @@ public class ActorManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        actorController.OnAction += OnAction;
     }
 
     // Update is called once per frame
@@ -89,5 +88,15 @@ public class ActorManager : MonoBehaviour
     public void Lock(bool value)
     {
         actorController.SetBool("lock", value);
+    }
+
+    public void OnAction()
+    {
+        if (interactionManager.list.Count == 0) return;
+
+        if (interactionManager.list[0].eventName == "frontStab")
+        {
+            directorManager.PlayFrontStab("frontStab", this, interactionManager.list[0].actorManager);
+        }
     }
 }
