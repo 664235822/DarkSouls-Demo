@@ -5,9 +5,8 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [RequireComponent(typeof(PlayableDirector))]
-public class DirectorManager : MonoBehaviour
+public class DirectorManager : IActorManagerInterface
 {
-    public ActorManager actorManager;
     public PlayableDirector playableDirector;
     public ActorManager attacker;
     public ActorManager victim;

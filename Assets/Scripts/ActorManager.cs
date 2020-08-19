@@ -10,6 +10,7 @@ public class ActorManager : MonoBehaviour
     public ActorManager actorManager;
     public StateManager stateManager;
     public DirectorManager directorManager;
+    public InteractionManager interactionManager;
 
     // Start is called before the first frame update
     void Start()

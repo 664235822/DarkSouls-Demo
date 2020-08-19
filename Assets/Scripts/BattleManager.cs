@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider))]
-public class BattleManager : MonoBehaviour
+public class BattleManager : IActorManagerInterface
 {
-    public ActorManager actorManager;
-    
     private void OnTriggerEnter(Collider other)
     {
         WeaponController targetController = other.GetComponentInParent<WeaponController>();

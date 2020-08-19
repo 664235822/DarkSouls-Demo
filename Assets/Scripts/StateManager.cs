@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateManager : MonoBehaviour
+public class StateManager : IActorManagerInterface
 {
-    public ActorManager actorManager;
-
     public float HP = 15.0f;
     public float HP_Max = 15.0f;
 

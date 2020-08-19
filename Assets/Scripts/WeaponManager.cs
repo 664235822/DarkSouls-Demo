@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponManager : MonoBehaviour
+public class WeaponManager : IActorManagerInterface
 {
-    public ActorManager actorManager;
-
     [SerializeField] GameObject leftHandle;
     [SerializeField] GameObject rightHandle;
     

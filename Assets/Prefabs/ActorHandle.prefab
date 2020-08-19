@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1791235979497496667}
   - component: {fileID: 8444973204703872110}
   - component: {fileID: 5065835953706539791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ActorHandle
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -181,7 +181,8 @@ MonoBehaviour:
   weaponManager: {fileID: 2705323099410560064}
   actorManager: {fileID: 1362523660812186269}
   stateManager: {fileID: 1791235979497496667}
-  directorManager: {fileID: 0}
+  directorManager: {fileID: 5065835953706539791}
+  interactionManager: {fileID: 5905603354052617580}
 --- !u!114 &1791235979497496667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +362,7 @@ GameObject:
   - component: {fileID: 2543893233326057222}
   - component: {fileID: 3358151853160919204}
   - component: {fileID: 2349744935416481222}
+  - component: {fileID: 5905603354052617580}
   m_Layer: 12
   m_Name: sensor
   m_TagString: Untagged
@@ -423,6 +425,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorManager: {fileID: 1362523660812186269}
+--- !u!114 &5905603354052617580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543893233326057216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7a244c582ef4dfeb84caa18039c613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorManager: {fileID: 1362523660812186269}
+  interactionCollider: {fileID: 3358151853160919204}
 --- !u!1 &2543893233487306825
 GameObject:
   m_ObjectHideFlags: 0
