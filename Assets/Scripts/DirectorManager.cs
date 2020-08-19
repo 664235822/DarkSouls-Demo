@@ -28,7 +28,7 @@ public class DirectorManager : IActorManagerInterface
 
     public void PlayFrontStab(string timelineName, ActorManager attacker, ActorManager victim)
     {
-        playableDirector.playableAsset = Instantiate(frontStab);
+        playableDirector.playableAsset = frontStab;
 
         foreach (var track in playableDirector.playableAsset.outputs)
         {
@@ -50,6 +50,8 @@ public class DirectorManager : IActorManagerInterface
             }
 
         }
+        
+        playableDirector.Play();
     }
     
 }

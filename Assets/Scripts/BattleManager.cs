@@ -10,6 +10,8 @@ public class BattleManager : IActorManagerInterface
     {
         WeaponController targetController = other.GetComponentInParent<WeaponController>();
 
+        if (targetController == null) return;
+
         GameObject attacker = targetController.weaponManager.actorManager.gameObject;
         GameObject receiver = actorManager.gameObject;
 

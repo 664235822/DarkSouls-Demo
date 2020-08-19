@@ -1743,6 +1743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorManager: {fileID: 0}
   interactionCollider: {fileID: 4393403471938572985}
+  list: []
 --- !u!1 &3544250536685694818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1912,6 @@ MonoBehaviour:
   battleManager: {fileID: 3673236278345852891}
   weaponManager: {fileID: 2705323099410560064, guid: 5d89729eed11d4a53a4c6dca96f98df1,
     type: 3}
-  actorManager: {fileID: 39024363674161280}
   stateManager: {fileID: 772846574123139654}
   directorManager: {fileID: 0}
   interactionManager: {fileID: 0}
@@ -1968,6 +1968,7 @@ MonoBehaviour:
   defence: 0
   lockTarget: 0
   counterBack: 0
+  action: 0
   inputEnabled: 1
 --- !u!320 &3544250537397379103
 PlayableDirector:
@@ -2000,9 +2001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorManager: {fileID: 39024363674161280}
   playableDirector: {fileID: 3544250537397379103}
-  attacker: {fileID: 39024363674161280}
-  victim: {fileID: 0}
-  timelineAsset: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
+  frontStab: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
 --- !u!1 &3755928260621174771
 GameObject:
   m_ObjectHideFlags: 0

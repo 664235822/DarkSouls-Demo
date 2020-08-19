@@ -9,27 +9,35 @@ public class CameraPlayableBehaviour : PlayableBehaviour
     public Camera myCamera;
     public float myFloat;
 
-    ActorManager actorManager;
+    PlayableDirector playableDirector;
 
     public override void OnPlayableCreate(Playable playable)
     {
-        PlayableDirector playableDirector = (PlayableDirector) playable.GetGraph().GetResolver();
-        foreach (var track in playableDirector.playableAsset.outputs)
-        {
-            if (track.streamName == "Attack Script" || track.streamName == "Victim Script")
-            {
-                actorManager = (ActorManager) playableDirector.GetGenericBinding(track.sourceObject);
-            }
-        }
+
     }
 
     public override void OnGraphStart(Playable playable)
     {
-        if (actorManager) actorManager.Lock(true);
+        playableDirector = (PlayableDirector) playable.GetGraph().GetResolver();
+        foreach (var track in playableDirector.playableAsset.outputs)
+        {
+            if (track.streamName == "Attacker Script" || track.streamName == "Victim Script")
+            {
+                ActorManager actorManager = (ActorManager) playableDirector.GetGenericBinding(track.sourceObject);
+                actorManager.Lock(true);
+            }
+        }
     }
 
     public override void OnGraphStop(Playable playable)
     {
-        if (actorManager) actorManager.Lock(false);
+        foreach (var track in playableDirector.playableAsset.outputs)
+        {
+            if (track.streamName == "Attacker Script" || track.streamName == "Victim Script")
+            {
+                ActorManager actorManager = (ActorManager) playableDirector.GetGenericBinding(track.sourceObject);
+                actorManager.Lock(false);
+            }
+        }
     }
 }

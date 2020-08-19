@@ -267,6 +267,13 @@ public class ActorController : MonoBehaviour
         playerInput.inputEnabled = false;
         planarVector = Vector3.zero;
     }
+
+    public void OnLockEnter()
+    {
+        playerInput.inputEnabled = false;
+        planarVector = Vector3.zero;
+        model.SendMessage("WeaponDisable");
+    }
     
     public void IssueTrigger(string triggerName)
     {
