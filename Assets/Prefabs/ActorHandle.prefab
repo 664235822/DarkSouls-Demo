@@ -244,6 +244,7 @@ MonoBehaviour:
   actorManager: {fileID: 1362523660812186269}
   playableDirector: {fileID: 8444973204703872110}
   frontStab: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
+  openBox: {fileID: 11400000, guid: b930b1878ab574d8f913b7c02a7de079, type: 2}
 --- !u!114 &2543893231632019505
 MonoBehaviour:
   m_ObjectHideFlags: 0

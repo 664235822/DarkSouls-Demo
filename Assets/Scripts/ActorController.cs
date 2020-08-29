@@ -98,12 +98,7 @@ public class ActorController : MonoBehaviour
             anim.SetLayerWeight(anim.GetLayerIndex("Defence"), 0);
         }
 
-        if (playerInput.action)
-        {
-            OnAction.Invoke();
-        }
-
-        if (playerInput.directionMagnitude > 0.1f)
+        if (playerInput.directionMagnitude > 0.1f && playerInput)
         {
             model.forward = Vector3.Slerp(model.forward, playerInput.directionVector, 0.3f);
         }
@@ -137,6 +132,11 @@ public class ActorController : MonoBehaviour
                 planarVector = playerInput.directionVector * walkSpeed *
                                (playerInput.run ? runSpeed : 1.0f);
             }
+        }
+        
+        if (playerInput.action)
+        {
+            OnAction.Invoke();
         }
 
 

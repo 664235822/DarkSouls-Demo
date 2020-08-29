@@ -10,11 +10,12 @@ public class DirectorManager : IActorManagerInterface
     public PlayableDirector playableDirector;
 
     public TimelineAsset frontStab;
+    public TimelineAsset openBox;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,11 +27,11 @@ public class DirectorManager : IActorManagerInterface
         }
     }
 
-    public void PlayFrontStab(string timelineName, ActorManager attacker, ActorManager victim)
+    public void PlayFrontStab(ActorManager attacker, ActorManager victim)
     {
-        if (playableDirector.playableAsset != null) return;
+        if (playableDirector.state == PlayState.Playing) return;
 
-        playableDirector.playableAsset = frontStab;
+        playableDirector.playableAsset = Instantiate(frontStab);
 
         TimelineAsset timeline = (TimelineAsset) playableDirector.playableAsset;
 
@@ -43,6 +44,7 @@ public class DirectorManager : IActorManagerInterface
                 {
                     CameraPlayableClip cameraPlayableClip = (CameraPlayableClip) clip.asset;
                     CameraPlayableBehaviour cameraPlayableBehaviour = cameraPlayableClip.template;
+                    cameraPlayableClip.actorManager.exposedName = System.Guid.NewGuid().ToString();
                     playableDirector.SetReferenceValue(cameraPlayableClip.actorManager.exposedName, attacker);
                 }
             }
@@ -53,6 +55,7 @@ public class DirectorManager : IActorManagerInterface
                 {
                     CameraPlayableClip cameraPlayableClip = (CameraPlayableClip) clip.asset;
                     CameraPlayableBehaviour cameraPlayableBehaviour = cameraPlayableClip.template;
+                    cameraPlayableClip.actorManager.exposedName = System.Guid.NewGuid().ToString();
                     playableDirector.SetReferenceValue(cameraPlayableClip.actorManager.exposedName, victim);
                 }
             }
@@ -65,10 +68,57 @@ public class DirectorManager : IActorManagerInterface
                 playableDirector.SetGenericBinding(track, victim.actorController.anim);
             }
         }
-        
+
         playableDirector.Evaluate();
 
         playableDirector.Play();
     }
-    
+
+    public void PlayOpenBox(ActorManager player, ActorManager box)
+    {
+        if (playableDirector.state == PlayState.Playing) return;
+
+        playableDirector.playableAsset = Instantiate(openBox);
+
+        TimelineAsset timeline = (TimelineAsset) playableDirector.playableAsset;
+
+        foreach (var track in timeline.GetOutputTracks())
+        {
+            if (track.name == "Player Script")
+            {
+                playableDirector.SetGenericBinding(track, player);
+                foreach (var clip in track.GetClips())
+                {
+                    CameraPlayableClip cameraPlayableClip = (CameraPlayableClip) clip.asset;
+                    CameraPlayableBehaviour cameraPlayableBehaviour = cameraPlayableClip.template;
+                    cameraPlayableClip.actorManager.exposedName = System.Guid.NewGuid().ToString();
+                    playableDirector.SetReferenceValue(cameraPlayableClip.actorManager.exposedName, player);
+                }
+            }
+            else if (track.name == "Box Script")
+            {
+                playableDirector.SetGenericBinding(track, box);
+                foreach (var clip in track.GetClips())
+                {
+                    CameraPlayableClip cameraPlayableClip = (CameraPlayableClip) clip.asset;
+                    CameraPlayableBehaviour cameraPlayableBehaviour = cameraPlayableClip.template;
+                    cameraPlayableClip.actorManager.exposedName = System.Guid.NewGuid().ToString();
+                    playableDirector.SetReferenceValue(cameraPlayableClip.actorManager.exposedName, box);
+                }
+            }
+            else if (track.name == "Player Animation")
+            {
+                playableDirector.SetGenericBinding(track, player.actorController.anim);
+            }
+            else if (track.name == "Box Animation")
+            {
+                playableDirector.SetGenericBinding(track, box.actorController.anim);
+            }
+        }
+
+        playableDirector.Evaluate();
+
+        playableDirector.Play();
+    }
+
 }

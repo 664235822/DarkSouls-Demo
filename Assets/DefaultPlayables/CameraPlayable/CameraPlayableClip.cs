@@ -18,7 +18,6 @@ public class CameraPlayableClip : PlayableAsset, ITimelineClipAsset
     {
         var playable = ScriptPlayable<CameraPlayableBehaviour>.Create (graph, template);
         CameraPlayableBehaviour clone = playable.GetBehaviour ();
-        actorManager.exposedName = GetInstanceID().ToString();
         clone.actorManager = actorManager.Resolve (graph.GetResolver ());
         return playable;
     }

@@ -94,9 +94,23 @@ public class ActorManager : MonoBehaviour
     {
         if (interactionManager.list.Count == 0) return;
 
-        if (interactionManager.list[0].eventName == "frontStab")
+        if (interactionManager.list[0].isActive)
         {
-            directorManager.PlayFrontStab("frontStab", this, interactionManager.list[0].actorManager);
+            if (interactionManager.list[0].eventName == "frontStab")
+            {
+                directorManager.PlayFrontStab(this, interactionManager.list[0].actorManager);
+            }
+            else if (interactionManager.list[0].eventName == "openBox")
+            {
+                if (BattleManager.CheckAnglePlayer(actorController.model.gameObject,
+                    interactionManager.list[0].actorManager.gameObject, 30.0f))
+                {
+                    interactionManager.list[0].isActive = false;
+                    actorController.model.LookAt(interactionManager.list[0].actorManager.transform, Vector3.up);
+                    directorManager.PlayOpenBox(this, interactionManager.list[0].actorManager);
+                }
+            }
         }
+        
     }
 }
