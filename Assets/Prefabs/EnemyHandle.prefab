@@ -1883,6 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85fc702cac5be45bfa6bb02ca5fb0d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actorManager: {fileID: 39024363674161280}
   model: {fileID: 1952633721466792094}
   anim: {fileID: 5618533910218011364}
   playerInput: {fileID: 1324634980395124380}
@@ -2002,6 +2003,7 @@ MonoBehaviour:
   actorManager: {fileID: 39024363674161280}
   playableDirector: {fileID: 3544250537397379103}
   frontStab: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
+  openBox: {fileID: 0}
 --- !u!1 &3755928260621174771
 GameObject:
   m_ObjectHideFlags: 0

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85fc702cac5be45bfa6bb02ca5fb0d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actorManager: {fileID: 1362523660812186269}
   model: {fileID: 2543893232510298517}
   anim: {fileID: 2543893232519808949}
   playerInput: {fileID: 2543893232172581382}

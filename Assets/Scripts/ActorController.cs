@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorController : MonoBehaviour
+public class ActorController : IActorManagerInterface
 {
     public Transform model;
     public Animator anim;
@@ -30,9 +30,6 @@ public class ActorController : MonoBehaviour
     private Vector3 deltaPosition;
 
     public bool leftIsShield = true;
-
-    public delegate void OnActionDelegate();
-    public event OnActionDelegate OnAction;
 
     // Update is called once per frame
     void Update()
@@ -136,10 +133,8 @@ public class ActorController : MonoBehaviour
         
         if (playerInput.action)
         {
-            OnAction.Invoke();
+            actorManager.OnAction();
         }
-
-
     }
 
     private void FixedUpdate()
