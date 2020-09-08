@@ -11,6 +11,7 @@ public class DirectorManager : IActorManagerInterface
 
     public TimelineAsset frontStab;
     public TimelineAsset openBox;
+    public TimelineAsset openLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -111,6 +112,53 @@ public class DirectorManager : IActorManagerInterface
                 playableDirector.SetGenericBinding(track, player.actorController.anim);
             }
             else if (track.name == "Box Animation")
+            {
+                playableDirector.SetGenericBinding(track, box.actorController.anim);
+            }
+        }
+
+        playableDirector.Evaluate();
+
+        playableDirector.Play();
+    }
+    
+     public void PlayOpenLevel(ActorManager player, ActorManager box)
+    {
+        if (playableDirector.state == PlayState.Playing) return;
+
+        playableDirector.playableAsset = Instantiate(openLevel);
+
+        TimelineAsset timeline = (TimelineAsset) playableDirector.playableAsset;
+
+        foreach (var track in timeline.GetOutputTracks())
+        {
+            if (track.name == "Player Script")
+            {
+                playableDirector.SetGenericBinding(track, player);
+                foreach (var clip in track.GetClips())
+                {
+                    CameraPlayableClip cameraPlayableClip = (CameraPlayableClip) clip.asset;
+                    CameraPlayableBehaviour cameraPlayableBehaviour = cameraPlayableClip.template;
+                    cameraPlayableClip.actorManager.exposedName = System.Guid.NewGuid().ToString();
+                    playableDirector.SetReferenceValue(cameraPlayableClip.actorManager.exposedName, player);
+                }
+            }
+            else if (track.name == "Level Script")
+            {
+                playableDirector.SetGenericBinding(track, box);
+                foreach (var clip in track.GetClips())
+                {
+                    CameraPlayableClip cameraPlayableClip = (CameraPlayableClip) clip.asset;
+                    CameraPlayableBehaviour cameraPlayableBehaviour = cameraPlayableClip.template;
+                    cameraPlayableClip.actorManager.exposedName = System.Guid.NewGuid().ToString();
+                    playableDirector.SetReferenceValue(cameraPlayableClip.actorManager.exposedName, box);
+                }
+            }
+            else if (track.name == "Player Animation")
+            {
+                playableDirector.SetGenericBinding(track, player.actorController.anim);
+            }
+            else if (track.name == "Level Animation")
             {
                 playableDirector.SetGenericBinding(track, box.actorController.anim);
             }

@@ -98,8 +98,18 @@ public class ActorManager : MonoBehaviour
                     directorManager.PlayOpenBox(this, interactionManager.list[0].actorManager);
                 }
             }
+            else if (interactionManager.list[0].eventName == "openLevel")
+            {
+                if (BattleManager.CheckAnglePlayer(actorController.model.gameObject,
+                    interactionManager.list[0].actorManager.gameObject, 30.0f))
+                {
+                    interactionManager.list[0].isActive = false;
+                    actorController.model.LookAt(interactionManager.list[0].actorManager.transform, Vector3.up);
+                    directorManager.PlayOpenLevel(this, interactionManager.list[0].actorManager);
+                }
+            }
         }
-        
+
         interactionManager.list.Clear();
         
     }
