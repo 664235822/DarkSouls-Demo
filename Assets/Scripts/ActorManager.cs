@@ -29,7 +29,7 @@ public class ActorManager : MonoBehaviour
         {
             if (stateManager.HP > 0 && attackValid)
             {
-                stateManager.AddHP(-5.0f);
+                stateManager.AddHP(-1 * target.WeaponData.ATK);
                 if (stateManager.HP > 0)
                 {
                     Hit();
