@@ -9,19 +9,21 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance => instance;
 
+    private DataBase weaponDataBase;
+    private WeaponFactory weaponFactory;
+
     // Start is called before the first frame update
     void Start()
     {
-        GameObject weapon = Resources.Load("Sword") as GameObject;
-        Instantiate(weapon, Vector3.zero, Quaternion.identity);
+        weaponDataBase = new DataBase();
+        weaponFactory = new WeaponFactory(weaponDataBase);
     }
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        if (instance != null) return;
+        
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }
