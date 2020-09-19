@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     {
         weaponDataBase = new DataBase();
         weaponFactory = new WeaponFactory(weaponDataBase);
+        
+        weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Sword", "R", weaponManager));
+        weaponManager.ChangeDualHands(false);
     }
 
     private void Awake()
@@ -35,16 +38,19 @@ public class GameManager : MonoBehaviour
         {
             weaponManager.UnloadWeapon("R");
             weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Sword", "R", weaponManager));
+            weaponManager.ChangeDualHands(false);
         }
         if (GUI.Button(new Rect(10, 50, 150, 30), "R: Falchion"))
         {
             weaponManager.UnloadWeapon("R");
             weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Falchion", "R", weaponManager));
+            weaponManager.ChangeDualHands(true);
         }
         if (GUI.Button(new Rect(10, 90, 150, 30), "R: Mace"))
         {
             weaponManager.UnloadWeapon("R");
             weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Mace", "R", weaponManager));
+            weaponManager.ChangeDualHands(false);
         }
         if (GUI.Button(new Rect(10, 130, 150, 30), "R: Clear All Weapon"))
         {

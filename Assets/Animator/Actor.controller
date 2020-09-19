@@ -1051,7 +1051,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: Defence
     m_StateMachine: {fileID: 4800675211184098774}
-    m_Mask: {fileID: 31900000, guid: e2f032053ae8e4afe803d3ba4b465b3b, type: 2}
+    m_Mask: {fileID: 31900000, guid: 016435090fc4c4c1f821c025d5e0d49a, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0

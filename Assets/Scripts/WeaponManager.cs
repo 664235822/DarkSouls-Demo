@@ -13,6 +13,9 @@ public class WeaponManager : IActorManagerInterface
     public WeaponController leftWeaponController;
     public WeaponController rightWeaponController;
     
+    public AnimatorOverrideController singleHandController;
+    public AnimatorOverrideController DualHandController;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +25,8 @@ public class WeaponManager : IActorManagerInterface
         leftWeaponController = BindWeaponController(leftHandle);
         rightWeaponController = BindWeaponController(rightHandle);
 
-        leftWeaponCollider = leftHandle.transform.GetComponentInChildren<BoxCollider>();
-        rightWeaponCollider = rightHandle.transform.GetComponentInChildren<BoxCollider>();
+        leftWeaponCollider = leftHandle.GetComponentInChildren<BoxCollider>();
+        rightWeaponCollider = rightHandle.GetComponentInChildren<BoxCollider>();
     }
 
     private WeaponController BindWeaponController(GameObject target)
@@ -108,5 +111,10 @@ public class WeaponManager : IActorManagerInterface
     public void CounterBackDisable()
     {
         actorManager.SetIsCounterBack(false);
+    }
+    
+    public void ChangeDualHands(bool check)
+    {
+        actorManager.actorController.anim.runtimeAnimatorController = check ? DualHandController : singleHandController;
     }
 }

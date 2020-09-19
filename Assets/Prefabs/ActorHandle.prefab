@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 1791235979497496667}
   - component: {fileID: 8444973204703872110}
   - component: {fileID: 5065835953706539791}
-  - component: {fileID: 5732784633107428304}
   m_Layer: 10
   m_Name: ActorHandle
   m_TagString: Player
@@ -248,18 +247,6 @@ MonoBehaviour:
   frontStab: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
   openBox: {fileID: 11400000, guid: b930b1878ab574d8f913b7c02a7de079, type: 2}
   openLevel: {fileID: 11400000, guid: d82782805599047e0a91171ed22cf315, type: 2}
---- !u!114 &5732784633107428304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2543893232172581376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32480acb4e19a4a30b99e52c1f06a9f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2543893231632019505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +290,9 @@ MonoBehaviour:
   rightWeaponCollider: {fileID: 0}
   leftWeaponController: {fileID: 0}
   rightWeaponController: {fileID: 0}
+  singleHandController: {fileID: 22100000, guid: 62da3ce846f874d3cb927bfcfc359440,
+    type: 2}
+  DualHandController: {fileID: 22100000, guid: 79d5dc40f2d2e420fb18400ef920b811, type: 2}
 --- !u!1 &2543893232637955565
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,12 +808,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2543893232510431957}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2543893232510298175 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400106, guid: 1ca7a7a6afda43546bd0e1bba3aec6bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 2543893232510431957}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2543893232510298123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400094, guid: 1ca7a7a6afda43546bd0e1bba3aec6bd,
@@ -845,6 +829,12 @@ Transform:
 --- !u!1 &2543893232510334389 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100192, guid: 1ca7a7a6afda43546bd0e1bba3aec6bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 2543893232510431957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2543893232510298175 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400106, guid: 1ca7a7a6afda43546bd0e1bba3aec6bd,
     type: 3}
   m_PrefabInstance: {fileID: 2543893232510431957}
   m_PrefabAsset: {fileID: 0}
