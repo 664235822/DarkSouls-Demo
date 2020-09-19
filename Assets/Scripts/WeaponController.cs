@@ -7,9 +7,4 @@ public class WeaponController : MonoBehaviour
 {
     public WeaponManager weaponManager;
     public WeaponData WeaponData;
-
-    private void Awake()
-    {
-        WeaponData = GetComponentInChildren<WeaponData>();
-    }
 }

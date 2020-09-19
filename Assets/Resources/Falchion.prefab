@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9216930685903885412
+--- !u!1 &7912175416308456131
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9216930685904046148}
-  - component: {fileID: 9216930685900621924}
-  - component: {fileID: 9216930685901621924}
-  - component: {fileID: 3068985270015316195}
-  m_Layer: 0
-  m_Name: Falchion
+  - component: {fileID: 1153119572558986957}
+  - component: {fileID: 5272790676480269835}
+  - component: {fileID: 1994296839374042118}
+  m_Layer: 9
+  m_Name: WPA0280
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9216930685904046148
+--- !u!4 &1153119572558986957
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9216930685903885412}
-  m_LocalRotation: {x: 0.027382713, y: -0.14211756, z: 0.7633601, w: 0.6295508}
-  m_LocalPosition: {x: -0.00008, y: 0.00077, z: -0.0004}
-  m_LocalScale: {x: 0.013997193, y: 0.012831835, z: 0.0069944}
+  m_GameObject: {fileID: 7912175416308456131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 9216930685904046148}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.563, y: -8.145, z: 99.932}
---- !u!33 &9216930685900621924
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5272790676480269835
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9216930685903885412}
+  m_GameObject: {fileID: 7912175416308456131}
   m_Mesh: {fileID: 4300000, guid: 73ddba52267a5634fa4f810c5777f1f2, type: 3}
---- !u!23 &9216930685901621924
+--- !u!23 &1994296839374042118
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9216930685903885412}
+  m_GameObject: {fileID: 7912175416308456131}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,16 +81,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3068985270015316195
-MonoBehaviour:
+--- !u!1 &9216930685903885412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9216930685904046148}
+  - component: {fileID: 5108267499917372915}
+  m_Layer: 9
+  m_Name: Falchion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9216930685904046148
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9216930685903885412}
+  m_LocalRotation: {x: 0.02738351, y: -0.14211226, z: 0.7633604, w: 0.6295516}
+  m_LocalPosition: {x: -0.00008, y: 0.00077, z: -0.0004}
+  m_LocalScale: {x: 0.013997193, y: 0.012831835, z: 0.0069944}
+  m_Children:
+  - {fileID: 1153119572558986957}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 14.563, y: -8.145, z: 99.932}
+--- !u!65 &5108267499917372915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216930685903885412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49141eb198f354132bd6f17ac73c75d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ATK: 8
+  serializedVersion: 2
+  m_Size: {x: 0.28125894, y: 1.523553, z: 0.04792768}
+  m_Center: {x: -0.024052741, y: -0.4385727, z: -0.0001005069}

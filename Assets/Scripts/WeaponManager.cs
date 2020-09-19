@@ -10,8 +10,8 @@ public class WeaponManager : IActorManagerInterface
     [SerializeField] BoxCollider leftWeaponCollider;
     [SerializeField] BoxCollider rightWeaponCollider;
 
-    [SerializeField] WeaponController leftWeaponController;
-    [SerializeField] WeaponController rightWeaponController;
+    public WeaponController leftWeaponController;
+    public WeaponController rightWeaponController;
     
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class WeaponManager : IActorManagerInterface
         rightWeaponCollider = rightHandle.transform.GetComponentInChildren<BoxCollider>();
     }
 
-    public WeaponController BindWeaponController(GameObject target)
+    private WeaponController BindWeaponController(GameObject target)
     {
         WeaponController temp;
         temp = target.GetComponent<WeaponController>();
@@ -38,7 +38,49 @@ public class WeaponManager : IActorManagerInterface
         temp.weaponManager = this;
         return temp;
     }
-    
+
+    public void UpdateWeaponCollider(string side, BoxCollider collider)
+    {
+        switch (side)
+        {
+            case "L":
+                leftWeaponCollider = collider;
+                break;
+            case "R":
+                rightWeaponCollider = collider;
+                break;
+        }
+    }
+
+    public void UnloadWeapon(string side)
+    {
+        switch (side)
+        {
+            case "L":
+            {
+                foreach (Transform item in leftWeaponController.transform)
+                {
+                    leftWeaponCollider = null;
+                    leftWeaponController.WeaponData = null;
+                    Destroy(item.gameObject);
+                }
+
+                break;
+            }
+            case "R":
+            {
+                foreach (Transform item in rightWeaponController.transform)
+                {
+                    rightWeaponCollider = null;
+                    rightWeaponController.WeaponData = null;
+                    Destroy(item.gameObject);
+                }
+
+                break;
+            }
+        }
+    }
+
     public void WeaponEnable()
     {
         if (actorManager.actorController.CheckStateTag("attackR"))
