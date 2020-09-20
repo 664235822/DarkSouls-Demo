@@ -544,6 +544,8 @@ MonoBehaviour:
   rightWeaponCollider: {fileID: 0}
   leftWeaponController: {fileID: 0}
   rightWeaponController: {fileID: 0}
+  singleHandController: {fileID: 0}
+  DualHandController: {fileID: 0}
 --- !u!1 &1270639984335769753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1917,7 @@ MonoBehaviour:
     type: 3}
   stateManager: {fileID: 772846574123139654}
   directorManager: {fileID: 0}
-  interactionManager: {fileID: 0}
+  interactionManager: {fileID: 5461137174742874092}
 --- !u!114 &772846574123139654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,6 +2006,7 @@ MonoBehaviour:
   playableDirector: {fileID: 3544250537397379103}
   frontStab: {fileID: 11400000, guid: f552901ee2f63400e85f03268d4d1580, type: 2}
   openBox: {fileID: 0}
+  openLevel: {fileID: 0}
 --- !u!1 &3755928260621174771
 GameObject:
   m_ObjectHideFlags: 0

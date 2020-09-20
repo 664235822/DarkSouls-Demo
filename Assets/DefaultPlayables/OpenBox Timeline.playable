@@ -350,7 +350,7 @@ MonoBehaviour:
   template:
     actorManager: {fileID: 0}
   actorManager:
-    exposedName: 22a9119f-922f-488a-80b1-9fd878f38dfc
+    exposedName: 9d3a6e1a-4160-4b8c-b55b-b940af971862
     defaultValue: {fileID: 0}
 --- !u!114 &2796537482338498411
 MonoBehaviour:
