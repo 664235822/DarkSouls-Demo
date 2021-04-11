@@ -1,3 +1,0 @@
-com.unity.postprocessing@2.1.6
-com.unity.render-pipelines.core@5.7.2
-com.unity.render-pipelines.lightweight@5.7.2

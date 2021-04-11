@@ -1,5 +1,0 @@
-Release notes for Gaia v1.9.4 May 2019
-
-· Fixed an issue where Gaia would display errors in Unity 2018.1
-· Fixed an issue where the Game Objects Synty assets (under Mobile / VR settings) would not spawn in Unity version 2018.2 and below
-· Improved stability for package import in Unity 2019.1 and above
