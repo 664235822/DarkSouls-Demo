@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ActorManager : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class ActorManager : MonoBehaviour
     {
         if (stateManager.isImmortal)
         {
-
         }
         else if (stateManager.isCounterBack && counterValid)
         {
@@ -46,7 +46,7 @@ public class ActorManager : MonoBehaviour
     {
         actorController.IssueTrigger("blocked");
     }
-    
+
     private void Hit()
     {
         actorController.IssueTrigger("hit");
@@ -61,7 +61,7 @@ public class ActorManager : MonoBehaviour
     {
         stateManager.isCounterBack = value;
     }
-    
+
     private void Die()
     {
         actorController.IssueTrigger("die");
@@ -70,7 +70,25 @@ public class ActorManager : MonoBehaviour
         {
             actorController.cameraController.lockState = false;
         }
+
         actorController.cameraController.enabled = false;
+
+        if (!actorController.cameraController.isAI)
+            StartCoroutine(Reborn());
+        else
+            StartCoroutine(Destroy());
+    }
+
+    private IEnumerator Reborn()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("GameScene");
+    }
+
+    private IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(3.0f);
+        Destroy(this);
     }
 
     public void Lock(bool value)
@@ -111,6 +129,5 @@ public class ActorManager : MonoBehaviour
         }
 
         interactionManager.list.Clear();
-        
     }
 }

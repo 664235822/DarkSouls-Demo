@@ -9,8 +9,6 @@ public class DummyInput : PlayerInputInterface
     {
         targetDirectionUp = 0;
         targetDirectionRight = 0;
-
-        attackRight = true;
     }
 
     // Update is called once per frame
