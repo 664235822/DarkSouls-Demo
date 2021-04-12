@@ -76,7 +76,7 @@ public class ActorManager : MonoBehaviour
         if (!actorController.cameraController.isAI)
             StartCoroutine(Reborn());
         else
-            StartCoroutine(Destroy());
+            StartCoroutine(DestroyCoroutine());
     }
 
     private IEnumerator Reborn()
@@ -85,10 +85,10 @@ public class ActorManager : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
-    private IEnumerator Destroy()
+    private IEnumerator DestroyCoroutine()
     {
         yield return new WaitForSeconds(3.0f);
-        Destroy(this);
+        Destroy(gameObject);
     }
 
     public void Lock(bool value)
