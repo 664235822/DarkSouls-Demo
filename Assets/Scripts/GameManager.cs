@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         weaponManager.UnloadWeapon("R");
         weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Sword", "R", weaponManager));
+        weaponManager.LeftWeaponEnabled(true);
         weaponManager.ChangeDualHands(false);
     }
 
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         weaponManager.UnloadWeapon("R");
         weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Falchion", "R", weaponManager));
+        weaponManager.LeftWeaponEnabled(false);
         weaponManager.ChangeDualHands(true);
     }
 
@@ -50,11 +52,13 @@ public class GameManager : MonoBehaviour
     {
         weaponManager.UnloadWeapon("R");
         weaponManager.UpdateWeaponCollider("R", weaponFactory.CreateWeapon("Mace", "R", weaponManager));
+        weaponManager.LeftWeaponEnabled(true);
         weaponManager.ChangeDualHands(false);
     }
 
     public void OnClearAll()
     {
         weaponManager.UnloadWeapon("R");
+        weaponManager.LeftWeaponEnabled(false);
     }
 }

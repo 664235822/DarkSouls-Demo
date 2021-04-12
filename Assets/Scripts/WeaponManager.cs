@@ -97,6 +97,11 @@ public class WeaponManager : IActorManagerInterface
 
     }
 
+    public void LeftWeaponEnabled(bool enable)
+    {
+        leftHandle.SetActive(enable);
+    }
+
     public void WeaponDisable()
     {
         rightWeaponCollider.enabled = false;
