@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: c3220e9da905485cbb0b26c25bdf157f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Archway_Niche_03_Collision
+    100004: Archway_Niche_03_Mesh
+    100006: Archway_Niche_03_Collider_01
+    100008: Archway_Niche_03_Collider_02
+    100010: Archway_Niche_03_Collider_03
+    100012: Archway_Niche_03_Collider_04
+    100014: Archway_Niche_03_Collider_05
+    100016: Archway_Niche_03_Collider_06
+    100018: Archway_Niche_03_Collider_07
+    100020: Archway_Niche_03_Collider_08
+    100022: Archway_Niche_03_Collider_09
+    400000: //RootNode
+    400002: Archway_Niche_03_Collision
+    400004: Archway_Niche_03_Mesh
+    400006: Archway_Niche_03_Collider_01
+    400008: Archway_Niche_03_Collider_02
+    400010: Archway_Niche_03_Collider_03
+    400012: Archway_Niche_03_Collider_04
+    400014: Archway_Niche_03_Collider_05
+    400016: Archway_Niche_03_Collider_06
+    400018: Archway_Niche_03_Collider_07
+    400020: Archway_Niche_03_Collider_08
+    400022: Archway_Niche_03_Collider_09
+    2300000: Archway_Niche_03_Collision
+    2300002: Archway_Niche_03_Mesh
+    2300004: Archway_Niche_03_Collider_01
+    2300006: Archway_Niche_03_Collider_02
+    2300008: Archway_Niche_03_Collider_03
+    2300010: Archway_Niche_03_Collider_04
+    2300012: Archway_Niche_03_Collider_05
+    2300014: Archway_Niche_03_Collider_06
+    2300016: Archway_Niche_03_Collider_07
+    2300018: Archway_Niche_03_Collider_08
+    2300020: Archway_Niche_03_Collider_09
+    3300000: Archway_Niche_03_Collision
+    3300002: Archway_Niche_03_Mesh
+    3300004: Archway_Niche_03_Collider_01
+    3300006: Archway_Niche_03_Collider_02
+    3300008: Archway_Niche_03_Collider_03
+    3300010: Archway_Niche_03_Collider_04
+    3300012: Archway_Niche_03_Collider_05
+    3300014: Archway_Niche_03_Collider_06
+    3300016: Archway_Niche_03_Collider_07
+    3300018: Archway_Niche_03_Collider_08
+    3300020: Archway_Niche_03_Collider_09
+    4300000: Archway_Niche_03_Mesh
+    4300002: Archway_Niche_03_Collision
+    4300004: Archway_Niche_03_Collider_01
+    4300006: Archway_Niche_03_Collider_02
+    4300008: Archway_Niche_03_Collider_03
+    4300010: Archway_Niche_03_Collider_04
+    4300012: Archway_Niche_03_Collider_05
+    4300014: Archway_Niche_03_Collider_06
+    4300016: Archway_Niche_03_Collider_07
+    4300018: Archway_Niche_03_Collider_08
+    4300020: Archway_Niche_03_Collider_09
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_Base_01
+    second: {fileID: 2100000, guid: 09a6bdff84cd47dabeaff92fe0467301, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 30
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 729dd3f5e7244f7e840dcce48585939b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Door_L_01
+    100004: Door_R_01
+    100006: Doorhandle_L_01
+    100008: Doorhandle_L_02
+    100010: Doorhandle_R_01
+    100012: Doorhandle_R_02
+    100014: Rose_L_01
+    100016: Rose_L_02
+    100018: Rose_R_01
+    100020: Rose_R_02
+    100022: Hinges_01
+    100024: pCube1
+    100026: Keyhole_01
+    100028: Keyhole_02
+    400000: //RootNode
+    400002: Door_L_01
+    400004: Door_R_01
+    400006: Doorhandle_L_01
+    400008: Doorhandle_L_02
+    400010: Doorhandle_R_01
+    400012: Doorhandle_R_02
+    400014: Rose_L_01
+    400016: Rose_L_02
+    400018: Rose_R_01
+    400020: Rose_R_02
+    400022: Hinges_01
+    400024: pCube1
+    400026: Keyhole_01
+    400028: Keyhole_02
+    2300000: Door_L_01
+    2300002: Door_R_01
+    2300004: Doorhandle_L_01
+    2300006: Doorhandle_L_02
+    2300008: Doorhandle_R_01
+    2300010: Doorhandle_R_02
+    2300012: Rose_L_01
+    2300014: Rose_L_02
+    2300016: Rose_R_01
+    2300018: Rose_R_02
+    2300020: Hinges_01
+    2300022: pCube1
+    2300024: Keyhole_01
+    2300026: Keyhole_02
+    3300000: Door_L_01
+    3300002: Door_R_01
+    3300004: Doorhandle_L_01
+    3300006: Doorhandle_L_02
+    3300008: Doorhandle_R_01
+    3300010: Doorhandle_R_02
+    3300012: Rose_L_01
+    3300014: Rose_L_02
+    3300016: Rose_R_01
+    3300018: Rose_R_02
+    3300020: Hinges_01
+    3300022: pCube1
+    3300024: Keyhole_01
+    3300026: Keyhole_02
+    4300000: Door_L_01
+    4300002: Rose_L_01
+    4300004: Doorhandle_L_01
+    4300006: Rose_L_02
+    4300008: Doorhandle_L_02
+    4300010: Door_R_01
+    4300012: Rose_R_01
+    4300014: Doorhandle_R_01
+    4300016: Rose_R_02
+    4300018: Doorhandle_R_02
+    4300020: Hinges_01
+    4300022: pCube1
+    4300024: Keyhole_01
+    4300026: Keyhole_02
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_Props_01
+    second: {fileID: 2100000, guid: e8d858f4dafd40318a65052911414e45, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 30
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

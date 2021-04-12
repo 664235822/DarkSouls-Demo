@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: edae929a3fff438ab2a153e3e3c1c23e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Staircase_04_Collision
+    100004: Staircase_04_Mesh
+    100006: Staircase_04_Mirrored_Collider_01
+    100008: Staircase_04_Mirrored_Collider_010
+    100010: Staircase_04_Mirrored_Collider_011
+    100012: Staircase_04_Mirrored_Collider_012
+    100014: Staircase_04_Mirrored_Collider_013
+    100016: Staircase_04_Mirrored_Collider_014
+    100018: Staircase_04_Mirrored_Collider_015
+    100020: Staircase_04_Mirrored_Collider_016
+    100022: Staircase_04_Mirrored_Collider_017
+    100024: Staircase_04_Mirrored_Collider_018
+    100026: Staircase_04_Mirrored_Collider_019
+    100028: Staircase_04_Mirrored_Collider_02
+    100030: Staircase_04_Mirrored_Collider_020
+    100032: Staircase_04_Mirrored_Collider_021
+    100034: Staircase_04_Mirrored_Collider_022
+    100036: Staircase_04_Mirrored_Collider_023
+    100038: Staircase_04_Mirrored_Collider_024
+    100040: Staircase_04_Mirrored_Collider_025
+    100042: Staircase_04_Mirrored_Collider_026
+    100044: Staircase_04_Mirrored_Collider_027
+    100046: Staircase_04_Mirrored_Collider_028
+    100048: Staircase_04_Mirrored_Collider_03
+    100050: Staircase_04_Mirrored_Collider_04
+    100052: Staircase_04_Mirrored_Collider_05
+    100054: Staircase_04_Mirrored_Collider_06
+    100056: Staircase_04_Mirrored_Collider_07
+    100058: Staircase_04_Mirrored_Collider_08
+    100060: Staircase_04_Mirrored_Collider_09
+    400000: //RootNode
+    400002: Staircase_04_Collision
+    400004: Staircase_04_Mesh
+    400006: Staircase_04_Mirrored_Collider_01
+    400008: Staircase_04_Mirrored_Collider_010
+    400010: Staircase_04_Mirrored_Collider_011
+    400012: Staircase_04_Mirrored_Collider_012
+    400014: Staircase_04_Mirrored_Collider_013
+    400016: Staircase_04_Mirrored_Collider_014
+    400018: Staircase_04_Mirrored_Collider_015
+    400020: Staircase_04_Mirrored_Collider_016
+    400022: Staircase_04_Mirrored_Collider_017
+    400024: Staircase_04_Mirrored_Collider_018
+    400026: Staircase_04_Mirrored_Collider_019
+    400028: Staircase_04_Mirrored_Collider_02
+    400030: Staircase_04_Mirrored_Collider_020
+    400032: Staircase_04_Mirrored_Collider_021
+    400034: Staircase_04_Mirrored_Collider_022
+    400036: Staircase_04_Mirrored_Collider_023
+    400038: Staircase_04_Mirrored_Collider_024
+    400040: Staircase_04_Mirrored_Collider_025
+    400042: Staircase_04_Mirrored_Collider_026
+    400044: Staircase_04_Mirrored_Collider_027
+    400046: Staircase_04_Mirrored_Collider_028
+    400048: Staircase_04_Mirrored_Collider_03
+    400050: Staircase_04_Mirrored_Collider_04
+    400052: Staircase_04_Mirrored_Collider_05
+    400054: Staircase_04_Mirrored_Collider_06
+    400056: Staircase_04_Mirrored_Collider_07
+    400058: Staircase_04_Mirrored_Collider_08
+    400060: Staircase_04_Mirrored_Collider_09
+    2300000: Staircase_04_Collision
+    2300002: Staircase_04_Mesh
+    2300004: Staircase_04_Mirrored_Collider_01
+    2300006: Staircase_04_Mirrored_Collider_010
+    2300008: Staircase_04_Mirrored_Collider_011
+    2300010: Staircase_04_Mirrored_Collider_012
+    2300012: Staircase_04_Mirrored_Collider_013
+    2300014: Staircase_04_Mirrored_Collider_014
+    2300016: Staircase_04_Mirrored_Collider_015
+    2300018: Staircase_04_Mirrored_Collider_016
+    2300020: Staircase_04_Mirrored_Collider_017
+    2300022: Staircase_04_Mirrored_Collider_018
+    2300024: Staircase_04_Mirrored_Collider_019
+    2300026: Staircase_04_Mirrored_Collider_02
+    2300028: Staircase_04_Mirrored_Collider_020
+    2300030: Staircase_04_Mirrored_Collider_021
+    2300032: Staircase_04_Mirrored_Collider_022
+    2300034: Staircase_04_Mirrored_Collider_023
+    2300036: Staircase_04_Mirrored_Collider_024
+    2300038: Staircase_04_Mirrored_Collider_025
+    2300040: Staircase_04_Mirrored_Collider_026
+    2300042: Staircase_04_Mirrored_Collider_027
+    2300044: Staircase_04_Mirrored_Collider_028
+    2300046: Staircase_04_Mirrored_Collider_03
+    2300048: Staircase_04_Mirrored_Collider_04
+    2300050: Staircase_04_Mirrored_Collider_05
+    2300052: Staircase_04_Mirrored_Collider_06
+    2300054: Staircase_04_Mirrored_Collider_07
+    2300056: Staircase_04_Mirrored_Collider_08
+    2300058: Staircase_04_Mirrored_Collider_09
+    3300000: Staircase_04_Collision
+    3300002: Staircase_04_Mesh
+    3300004: Staircase_04_Mirrored_Collider_01
+    3300006: Staircase_04_Mirrored_Collider_010
+    3300008: Staircase_04_Mirrored_Collider_011
+    3300010: Staircase_04_Mirrored_Collider_012
+    3300012: Staircase_04_Mirrored_Collider_013
+    3300014: Staircase_04_Mirrored_Collider_014
+    3300016: Staircase_04_Mirrored_Collider_015
+    3300018: Staircase_04_Mirrored_Collider_016
+    3300020: Staircase_04_Mirrored_Collider_017
+    3300022: Staircase_04_Mirrored_Collider_018
+    3300024: Staircase_04_Mirrored_Collider_019
+    3300026: Staircase_04_Mirrored_Collider_02
+    3300028: Staircase_04_Mirrored_Collider_020
+    3300030: Staircase_04_Mirrored_Collider_021
+    3300032: Staircase_04_Mirrored_Collider_022
+    3300034: Staircase_04_Mirrored_Collider_023
+    3300036: Staircase_04_Mirrored_Collider_024
+    3300038: Staircase_04_Mirrored_Collider_025
+    3300040: Staircase_04_Mirrored_Collider_026
+    3300042: Staircase_04_Mirrored_Collider_027
+    3300044: Staircase_04_Mirrored_Collider_028
+    3300046: Staircase_04_Mirrored_Collider_03
+    3300048: Staircase_04_Mirrored_Collider_04
+    3300050: Staircase_04_Mirrored_Collider_05
+    3300052: Staircase_04_Mirrored_Collider_06
+    3300054: Staircase_04_Mirrored_Collider_07
+    3300056: Staircase_04_Mirrored_Collider_08
+    3300058: Staircase_04_Mirrored_Collider_09
+    4300000: Staircase_04_Collision
+    4300002: Staircase_04_Mesh
+    4300004: Staircase_04_Mirrored_Collider_01
+    4300006: Staircase_04_Mirrored_Collider_02
+    4300008: Staircase_04_Mirrored_Collider_03
+    4300010: Staircase_04_Mirrored_Collider_04
+    4300012: Staircase_04_Mirrored_Collider_05
+    4300014: Staircase_04_Mirrored_Collider_06
+    4300016: Staircase_04_Mirrored_Collider_07
+    4300018: Staircase_04_Mirrored_Collider_08
+    4300020: Staircase_04_Mirrored_Collider_09
+    4300022: Staircase_04_Mirrored_Collider_010
+    4300024: Staircase_04_Mirrored_Collider_011
+    4300026: Staircase_04_Mirrored_Collider_012
+    4300028: Staircase_04_Mirrored_Collider_013
+    4300030: Staircase_04_Mirrored_Collider_014
+    4300032: Staircase_04_Mirrored_Collider_015
+    4300034: Staircase_04_Mirrored_Collider_016
+    4300036: Staircase_04_Mirrored_Collider_017
+    4300038: Staircase_04_Mirrored_Collider_018
+    4300040: Staircase_04_Mirrored_Collider_019
+    4300042: Staircase_04_Mirrored_Collider_020
+    4300044: Staircase_04_Mirrored_Collider_021
+    4300046: Staircase_04_Mirrored_Collider_022
+    4300048: Staircase_04_Mirrored_Collider_023
+    4300050: Staircase_04_Mirrored_Collider_024
+    4300052: Staircase_04_Mirrored_Collider_025
+    4300054: Staircase_04_Mirrored_Collider_026
+    4300056: Staircase_04_Mirrored_Collider_027
+    4300058: Staircase_04_Mirrored_Collider_028
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_Base_01
+    second: {fileID: 2100000, guid: 09a6bdff84cd47dabeaff92fe0467301, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 12
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

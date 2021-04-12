@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 2ca9ec6f8b074493ba885f1cec23016e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Door_Left
+    100002: Door_Right
+    100004: //RootNode
+    100006: FP_Door_Bronze_Arch_01
+    100008: Door_02_Arch
+    100010: Door_L_01
+    100012: Door_R_01
+    100014: Doorhandle_L_01
+    100016: Doorhandle_L_02
+    100018: Doorhandle_R_01
+    100020: Doorhandle_R_02
+    100022: Rose_L_01
+    100024: Rose_L_02
+    100026: Rose_R_01
+    100028: Rose_R_02
+    400000: Door_Left
+    400002: Door_Right
+    400004: //RootNode
+    400006: FP_Door_Bronze_Arch_01
+    400008: Door_02_Arch
+    400010: Door_L_01
+    400012: Door_R_01
+    400014: Doorhandle_L_01
+    400016: Doorhandle_L_02
+    400018: Doorhandle_R_01
+    400020: Doorhandle_R_02
+    400022: Rose_L_01
+    400024: Rose_L_02
+    400026: Rose_R_01
+    400028: Rose_R_02
+    2300000: Door_Left
+    2300002: Door_Right
+    2300004: FP_Door_Bronze_Arch_01
+    2300006: Door_02_Arch
+    2300008: Door_L_01
+    2300010: Door_R_01
+    2300012: Doorhandle_L_01
+    2300014: Doorhandle_L_02
+    2300016: Doorhandle_R_01
+    2300018: Doorhandle_R_02
+    2300020: Rose_L_01
+    2300022: Rose_L_02
+    2300024: Rose_R_01
+    2300026: Rose_R_02
+    3300000: Door_Left
+    3300002: Door_Right
+    3300004: FP_Door_Bronze_Arch_01
+    3300006: Door_02_Arch
+    3300008: Door_L_01
+    3300010: Door_R_01
+    3300012: Doorhandle_L_01
+    3300014: Doorhandle_L_02
+    3300016: Doorhandle_R_01
+    3300018: Doorhandle_R_02
+    3300020: Rose_L_01
+    3300022: Rose_L_02
+    3300024: Rose_R_01
+    3300026: Rose_R_02
+    4300000: FP_Door_Bronze_Arch_01
+    4300002: Door_Left
+    4300004: Door_Right
+    4300006: Door_02_Arch
+    4300008: Door_L_01
+    4300010: Rose_L_01
+    4300012: Doorhandle_L_01
+    4300014: Rose_L_02
+    4300016: Doorhandle_L_02
+    4300018: Door_R_01
+    4300020: Rose_R_01
+    4300022: Doorhandle_R_01
+    4300024: Rose_R_02
+    4300026: Doorhandle_R_02
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_01_Material
+    second: {fileID: 2100000, guid: de9f796f192f406084b00440e5c4e670, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 30
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
