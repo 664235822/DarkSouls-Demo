@@ -95,6 +95,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -103,9 +105,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: 1
-    mipBias: -100
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -126,9 +128,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -708,6 +713,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      RobotBoyRoll01: 21300002
+      RobotBoyRoll21: 21300042
+      RobotBoyRoll09: 21300018
+      RobotBoyRoll10: 21300020
+      RobotBoyRoll02: 21300004
+      RobotBoyRoll06: 21300012
+      RobotBoyRoll23: 21300046
+      RobotBoyRoll03: 21300006
+      RobotBoyRoll16: 21300032
+      RobotBoyRoll20: 21300040
+      RobotBoyRoll08: 21300016
+      RobotBoyRoll17: 21300034
+      RobotBoyRoll12: 21300024
+      RobotBoyRoll15: 21300030
+      RobotBoyRoll05: 21300010
+      RobotBoyRoll22: 21300044
+      RobotBoyRoll07: 21300014
+      RobotBoyRoll00: 21300000
+      RobotBoyRoll13: 21300026
+      RobotBoyRoll04: 21300008
+      RobotBoyRoll18: 21300036
+      RobotBoyRoll19: 21300038
+      RobotBoyRoll11: 21300022
+      RobotBoyRoll14: 21300028
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
