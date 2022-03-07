@@ -17,13 +17,14 @@ public class MoveAction : Action
         float distance = Vector3.Distance(transform.position, target.Value.position);
         if (distance <= maxDistance.Value && distance > minDistance.Value)
         {
-            transform.Translate((target.Value.position - transform.position).normalized * speed.Value * Time.deltaTime);
-            GetComponent<ActorController>().anim.SetFloat("forward",1);
+            transform.position += (target.Value.position - transform.position).normalized * speed.Value * Time.deltaTime;
+            transform.LookAt(target.Value);
+            GetComponent<ActorController>().anim.SetFloat("forward", 1);
             return TaskStatus.Running;
         }
         else
         {
-            GetComponent<ActorController>().anim.SetFloat("forward",0);
+            GetComponent<ActorController>().anim.SetFloat("forward", 0);
             return TaskStatus.Failure;
         }
     }
