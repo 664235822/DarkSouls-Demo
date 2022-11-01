@@ -24,6 +24,10 @@
 * Multistory Dungeons 2
 * Standard Assets
 
+### 使用方式
+* 请使用git和git-lfs或者其他相似软件对项目进行clone
+* 不能直接下载源代码zip包
+
 ### 在此感谢
 * B站up主 傅老師MrFu 提供的视频教学和素材资源
 
